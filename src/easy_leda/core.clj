@@ -1,7 +1,7 @@
 (ns easy-leda.core
   (:gen-class)
   (:require [clojure.java.io :as io]
-            [clojure.pprint :as pp]))
+            [easy-leda.client :as lc]))
 
 (def user-file-path [(System/getProperty "user.home") ".easy_leda"])
 (def user-file (apply io/file user-file-path))
