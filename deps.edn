@@ -1,4 +1,6 @@
 {:paths ["src"]
- :deps {clj-http {:mvn/version "3.10.0"}}
+ :deps {clj-http {:mvn/version "3.10.0"}
+        org.clojure/data.zip {:mvn/version "0.1.3"}
+        org.clojure/data.xml {:mvn/version "0.2.0-alpha5"}}
  :aliases {:dev {:extra-deps {}
                  :main-opts ["-m" "dev"]}}}

@@ -1,5 +1,8 @@
 (ns easy-leda.client
   (:require [clj-http.client :as client]
+            [clojure.data.xml :as xml]
+            [clojure.zip :as z]
+            [clojure.data.zip.xml :as zx]
             [clojure.java.io :as io]))
 
 ;; https://stackoverflow.com/questions/5419125/reading-a-zip-file-using-java-api-from-clojure
@@ -78,13 +81,29 @@
 (defn dl->folder [out res]
   (->> res
        (res->stream)
-       (zip->files (get-path out res))
-       ))
+       (zip->files (get-path out res))))
 
 (defn get-exc-name [exc g1]
   (format "R%02d-%s" exc (if g1 "01" "02")))
 
+;; Updating with xml parsing is far too much work for this simple task
+#_(defn update-pom [exc mat g1 path]
+  (let [pom-file (io/file path "pom.xml")
+        current-pom (z/xml-zip (xml/parse (io/input-stream pom-file)))]
+    (-> current-pom
+        (zx/xml1-> :build :plugins :plugin :executions :execution :configuration :matricula)
+        (z/edit #(assoc-in % [:content] mat))
+        (z/up)
+        (zx/xml1-> :roteiro)
+        (z/edit #(assoc-in % [:content] exc))
+        (z/root)
+        (xml/indent-str))))
+
+;; (xml/emit-str (z/root (z/edit (zx/xml1-> (z/up (z/edit (zx/xml1-> pomzip :build :plugins :plugin :executions :execution :configuration :matricula) #(assoc-in % [:content] "EITA"))) :roteiro) #(assoc-in % [:content] "ROT"))))
+
+
 (defn get-exercise [exc {:keys [mat g1 path]}]
   (let [exc-name (get-exc-name exc g1)]
     (->> (download mat exc-name)
-         (dl->folder path))))
+         (dl->folder path)
+         (update-pom exc mat g1))))
