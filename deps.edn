@@ -1,0 +1,4 @@
+{:paths ["src"]
+ :deps {}
+ :aliases {:dev {:extra-deps {}
+                 :main-opts ["-m" "dev"]}}}
