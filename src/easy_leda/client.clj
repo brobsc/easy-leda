@@ -101,6 +101,15 @@
 
 ;; (xml/emit-str (z/root (z/edit (zx/xml1-> (z/up (z/edit (zx/xml1-> pomzip :build :plugins :plugin :executions :execution :configuration :matricula) #(assoc-in % [:content] "EITA"))) :roteiro) #(assoc-in % [:content] "ROT"))))
 
+;; TODO: Find better way to replace a regex match
+(defn update-pom [exc mat g1 path]
+  (let [pom-path (io/file path "pom.xml")
+        pom (slurp pom-path)
+        exc-name (get-exc-name exc g1)]
+    (-> pom
+        (clojure.string/replace #"<matricula>(.*)</matricula>" (str "<matricula>" mat "</matricula>"))
+        (clojure.string/replace #"<roteiro>(.*)</roteiro>" (str "<roteiro>" exc-name "</roteiro>"))
+        (io/copy pom-path))))
 
 (defn get-exercise [exc {:keys [mat g1 path]}]
   (let [exc-name (get-exc-name exc g1)]

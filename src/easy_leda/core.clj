@@ -37,5 +37,13 @@
   (lc/get-exercise exc (user-conf)))
 
 (defn -main []
-  (println "Hello World!")
-  (read-conf))
+  (println "=================")
+  (println "=== EASY LEDA ===")
+  (println "=================")
+  (loop [inp (read-input "Insira um comando (dl/conf): ")]
+    (when inp
+      (case (clojure.string/lower-case inp)
+        "dl" (get-exercise (Integer/parseInt (read-input "Insira o no. do roteiro: ")))
+        "conf" (read-conf)
+        (println "o/"))))
+  )
