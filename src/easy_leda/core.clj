@@ -5,12 +5,11 @@
 
 (def user-file-path [(System/getProperty "user.home") ".easy_leda"])
 (def user-file (apply io/file user-file-path))
-
-(def user-conf (read-string (slurp (doto (apply io/file user-file-path)))))
+(defn user-conf [] (read-string (slurp (doto (apply io/file user-file-path)))))
 
 (defn prepare-user-file []
-  (when-not (.exists (apply io/file user-file-path))
-    (spit (apply io/file user-file-path) "")))
+  (when-not (.exists user-file)
+    (spit user-file "")))
 
 (defn update-conf [mat]
   (spit user-file (prn-str {:mat mat})))
