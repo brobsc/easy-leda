@@ -11,18 +11,30 @@
   (when-not (.exists user-file)
     (spit user-file "")))
 
-(defn update-conf [mat]
-  (spit user-file (prn-str {:mat mat})))
+(defn update-conf [mat g1? path]
+  (spit user-file (prn-str {:mat mat
+                            :g1 g1?
+                            :path path})))
+
+(defn read-input [prompt]
+  (print prompt)
+  (flush)
+  (let [inp (read-line)]
+    inp))
 
 (defn read-conf []
-  (print "Insira sua matricula: ")
-  (flush)
-  (let [mat (read-line)]
-    (update-conf mat)))
+  (let [mat (read-input "Insira sua matricula: ")
+        group (read-input "Turma 01? (s/n): ")
+        path (read-input "Insira o diretorio dos roteiros: ")]
+    (update-conf mat (= "s" (clojure.string/lower-case group))
+                 (clojure.string/join "/" [(System/getProperty "user.home") path ""]))))
 
 (defn start []
   (prepare-user-file)
   (println user-conf))
+
+(defn get-exercise [exc]
+  (lc/get-exercise exc (user-conf)))
 
 (defn -main []
   (println "Hello World!")

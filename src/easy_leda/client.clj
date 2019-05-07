@@ -78,9 +78,13 @@
 (defn dl->folder [out res]
   (->> res
        (res->stream)
-       (zip->files (get-path "./" res))
+       (zip->files (get-path out res))
        ))
 
-(defn get-exercise [mat exc]
-  (->> (download mat exc)
-       (dl->folder "./")))
+(defn get-exc-name [exc g1]
+  (format "R%02d-%s" exc (if g1 "01" "02")))
+
+(defn get-exercise [exc {:keys [mat g1 path]}]
+  (let [exc-name (get-exc-name exc g1)]
+    (->> (download mat exc-name)
+         (dl->folder path))))
