@@ -9,7 +9,7 @@
 
 (defn prepare-user-file []
   (when-not (.exists user-file)
-    (spit user-file "")))
+    (spit user-file "{}")))
 
 (defn update-conf [mat g1? path]
   (spit user-file (prn-str {:mat mat
@@ -26,21 +26,25 @@
   (let [mat (read-input "Insira sua matricula: ")
         group (read-input "Turma 01? (s/n): ")
         path (read-input "Insira o diretorio dos roteiros: ")]
-    (update-conf mat (= "s" (clojure.string/lower-case group))
+    (update-conf mat
+                 (= "s" (clojure.string/lower-case group))
                  (clojure.string/join "/" [(System/getProperty "user.home") path ""]))))
 
 (defn start []
   (prepare-user-file)
-  (println user-conf))
+  (when-not (:mat (user-conf))
+    (println "=== INICIANDO CONFIG ===")
+    (read-conf)))
 
 (defn get-exercise [exc]
   (lc/get-exercise exc (user-conf)))
 
 (defn -main []
+  (start)
   (println "=================")
   (println "=== EASY LEDA ===")
   (println "=================")
-  (loop [inp (read-input "Insira um comando (dl/conf): ")]
+  (let [inp (read-input "Insira um comando (dl/conf): ")]
     (when inp
       (case (clojure.string/lower-case inp)
         "dl" (get-exercise (Integer/parseInt (read-input "Insira o no. do roteiro: ")))
