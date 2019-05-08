@@ -46,8 +46,7 @@
   (println "=================")
   (let [inp (read-input "Insira um comando (dl/conf): ")]
     (when inp
-      (case (clojure.string/lower-case inp)
-        "dl" (get-exercise (read-input "Insira o id do roteiro (RXX/PPX/AXX/RRX): ")))
+      (condp = (clojure.string/lower-case inp)
+        "dl" (get-exercise (read-input "Insira o id do roteiro (RXX/PPX/AXX/RRX): "))
         "conf" (read-conf)
-        (println "o/"))))
-
+        (println "o/")))))
