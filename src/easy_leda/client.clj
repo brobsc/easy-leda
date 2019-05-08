@@ -19,8 +19,11 @@
 ;; -o result.zip
 ;; http://150.165.85.29:81/download
 
+(defn log [& msg]
+  (println (str "[" "LOG" "]: " (apply str msg))))
 
 (defn download [mat exc]
+  (log (str "Baixando exercicio " exc))
   (client/post download-url
    {:headers {:upgrade-insecure-requests 1
               :origin "http://150.165.85.29:81"
@@ -30,24 +33,9 @@
                   :matricula mat}
     :as :stream}))
 
-(defn dl->zip [out res]
-  (let [path (str out
-                  (get
-                   (re-find #"filename=\"(R.*)-environment.zip\""
-                            (get-in res [:headers :content-disposition])) 1)
-                  ".zip")]
-    (io/copy (get-in res [:body])
-             (io/file path)
-             )
-    path))
-
-(defn zip->entries [zip]
-  (lazy-seq
-   (when-let [entry (.getNextEntry zip)]
-     (cons entry (zip->entries zip)))))
-
-(defn entry->file [entry zip out]
+(defn zip-entry->file! [entry zip out]
   (when-not (.isDirectory entry)
+    (log (str "Extraindo " (.getName entry)))
     (let [file (io/file out (.getName entry))
           buff-size 4096
           buffer (byte-array buff-size)
@@ -65,23 +53,26 @@
         (re-find #"filename=\"(R.*)-environment.zip\""
                  (get-in res [:headers :content-disposition])) 1)))
 
-(defn zip->files [out zip]
-  (loop [entry (.getNextEntry zip)]
+(defn stream->files! [out zip-stream]
+  (log "Preparando para extrair arquivos para " out "...")
+  (loop [entry (.getNextEntry zip-stream)]
     (if entry
-      (do (entry->file entry zip out)
-          (recur (.getNextEntry zip)))
+      (do (zip-entry->file! entry zip-stream out)
+          (recur (.getNextEntry zip-stream)))
       out)))
 
 (defn res->stream [res]
+  (log "Convertendo resposta para zip...")
   (-> res
       (:body)
       (io/input-stream)
       (java.util.zip.ZipInputStream.)))
 
 (defn dl->folder [out res]
+  (log "Preparando arquivos...")
   (->> res
        (res->stream)
-       (zip->files (get-path out res))))
+       (stream->files! (get-path out res))))
 
 (defn get-exc-name [exc g1]
   (format "%s-%s" exc (if g1 "01" "02")))
@@ -103,6 +94,7 @@
 
 ;; TODO: Find better way to replace a regex match
 (defn update-pom [exc mat g1 path]
+  (log "Atualizando arquivo pom...")
   (let [pom-path (io/file path "pom.xml")
         pom (slurp pom-path)
         exc-name (get-exc-name exc g1)]
@@ -112,8 +104,9 @@
         (io/copy pom-path))))
 
 (defn get-exercise [exc {:keys [mat g1 path]}]
+  (log "Iniciando download de exercicio...")
   (let [exc-name (get-exc-name exc g1)]
     (->> (download mat exc-name)
          (dl->folder path)
-         (update-pom exc mat g1))))
-
+         (update-pom exc mat g1)))
+  (log "Exercicio baixado com sucesso!"))
