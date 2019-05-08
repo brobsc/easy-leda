@@ -84,7 +84,7 @@
        (zip->files (get-path out res))))
 
 (defn get-exc-name [exc g1]
-  (format "R%02d-%s" exc (if g1 "01" "02")))
+  (format "%s-%s" exc (if g1 "01" "02")))
 
 ;; Updating with xml parsing is far too much work for this simple task
 #_(defn update-pom [exc mat g1 path]
@@ -116,3 +116,4 @@
     (->> (download mat exc-name)
          (dl->folder path)
          (update-pom exc mat g1))))
+
