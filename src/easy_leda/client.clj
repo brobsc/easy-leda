@@ -1,9 +1,8 @@
 (ns easy-leda.client
   (:require [clj-http.client :as client]
-            [clojure.data.xml :as xml]
-            [clojure.zip :as z]
-            [clojure.data.zip.xml :as zx]
-            [clojure.java.io :as io]))
+            [clojure.java.io :as io]
+            [clojure.string :as s])
+  (:import (java.util.zip ZipInputStream ZipEntry)))
 
 ;; https://stackoverflow.com/questions/5419125/reading-a-zip-file-using-java-api-from-clojure
 
@@ -33,7 +32,7 @@
                   :matricula mat}
     :as :stream}))
 
-(defn zip-entry->file! [entry zip out]
+(defn zip-entry->file! [^ZipEntry entry zip out]
   (when-not (.isDirectory entry)
     (log (str "Extraindo " (.getName entry)))
     (let [file (io/file out (.getName entry))
@@ -53,7 +52,7 @@
         (re-find #"filename=\"(R.*)-environment.zip\""
                  (get-in res [:headers :content-disposition])) 1)))
 
-(defn stream->files! [out zip-stream]
+(defn stream->files! [out ^ZipInputStream zip-stream]
   (log "Preparando para extrair arquivos para " out "...")
   (loop [entry (.getNextEntry zip-stream)]
     (if entry
@@ -66,7 +65,7 @@
   (-> res
       (:body)
       (io/input-stream)
-      (java.util.zip.ZipInputStream.)))
+      (ZipInputStream.)))
 
 (defn dl->folder [out res]
   (log "Preparando arquivos...")
@@ -99,8 +98,8 @@
         pom (slurp pom-path)
         exc-name (get-exc-name exc g1)]
     (-> pom
-        (clojure.string/replace #"<matricula>(.*)</matricula>" (str "<matricula>" mat "</matricula>"))
-        (clojure.string/replace #"<roteiro>(.*)</roteiro>" (str "<roteiro>" exc-name "</roteiro>"))
+        (s/replace #"<matricula>(.*)</matricula>" (str "<matricula>" mat "</matricula>"))
+        (s/replace #"<roteiro>(.*)</roteiro>" (str "<roteiro>" exc-name "</roteiro>"))
         (io/copy pom-path))))
 
 (defn get-exercise [exc {:keys [mat g1 path]}]
