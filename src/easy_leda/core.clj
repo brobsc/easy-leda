@@ -39,14 +39,26 @@
 (defn get-exercise [exc]
   (lc/get-exercise exc (user-conf)))
 
-(defn -main []
-  (start)
+(defn print-banner []
   (println "=================")
   (println "=== EASY LEDA ===")
-  (println "=================")
+  (println "================="))
+
+(defn i-mode []
   (let [inp (read-input "Insira um comando (dl/conf): ")]
     (when inp
       (condp = (clojure.string/lower-case inp)
         "dl" (get-exercise (read-input "Insira o id do roteiro (RXX/PPX/AXX/RRX): "))
         "conf" (read-conf)
         (println "o/")))))
+
+(defn args-mode [[cmd exc & _]]
+  (condp = cmd
+    "dl" (if exc (get-exercise exc) (println "Necessario um id de roteiro para baixar."))
+    "conf" (read-conf)
+    (println "comando " (str "\"" cmd "\"") "nao reconhecido.")))
+
+(defn -main [& args]
+  (start)
+  (print-banner)
+  (if args (args-mode args) (i-mode)))
