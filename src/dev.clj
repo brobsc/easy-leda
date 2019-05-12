@@ -1,8 +1,9 @@
 (ns dev
-  (:require [easy-leda.core :as e]
-            [nrepl.cmdline :as nrepl])
-  (:gen-class))
+  (:require [easy-leda.core]
+            [nrepl.cmdline :as nrepl]
+            [reply.main :as reply]))
 
 (defn -main []
   (println "Dev started...")
-  (nrepl/-main "-i"))
+  (reply/launch-nrepl {:port 6688})
+  (shutdown-agents))
