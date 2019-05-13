@@ -95,9 +95,9 @@
            (last)))
 
 (defn has-valid-pom [path]
-  (if (.exists (io/file path "pom.xml"))
-    (if-let [exc (get-pom-exc path)]
-     (s/includes? exc "R") false)))
+  (boolean (when (.exists (io/file path "pom.xml"))
+             (when-let [exc (get-pom-exc path)]
+               (s/includes? exc "R")))))
 
 (defn get-subdirs [path]
   (log "Localizando diretorios de LEDA...")
