@@ -99,11 +99,14 @@
              (when-let [exc (get-pom-exc path)]
                (s/includes? exc "R")))))
 
+(defn is-dir [^java.io.File file]
+  (.isDirectory file))
+
 (defn get-subdirs [path]
   (log "Localizando diretorios de LEDA...")
   (->> (io/file path)
        (.listFiles)
-       (filter #(.isDirectory %))
+       (filter is-dir)
        (filter has-valid-pom)
        (mapv str)))
 
@@ -117,11 +120,15 @@
 
 (defn get-new-dir [mat base path]
   (log "Procurando nome correto para " path)
-  (let [new-path (->> (get-pom-exc path) (download mat) (get-path base))]
-    new-path))
+  (->> (get-pom-exc path)
+       (download mat)
+       (get-path base)))
 
 (defn organize [{:keys [mat path]}]
-  (->> (get-subdirs path)
-       (map (juxt #(get-new-dir mat path %) identity))
-       (map (partial apply move-dir!))
-       (mapv str)))
+  (let [get-new-dir* (partial get-new-dir mat path)
+        move-dir!* (partial apply move-dir!)
+        get-from-to (juxt get-new-dir* identity)]
+    (->> (get-subdirs path)
+         (map get-from-to)
+         (map move-dir!*)
+         (mapv str))))
