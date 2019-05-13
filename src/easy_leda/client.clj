@@ -10,7 +10,7 @@
   (println (str "[LOG]: " (apply str msg))))
 
 (defn download [mat exc]
-  (log (str "Baixando exercicio " exc))
+  (log (str "Pegando conteudo do exercicio " exc))
   (client/post download-url
                {:headers {:upgrade-insecure-requests 1
                           :origin "http://150.165.85.29:81"
@@ -100,6 +100,7 @@
      (s/includes? exc "R") false)))
 
 (defn get-subdirs [path]
+  (log "Localizando diretorios de LEDA...")
   (->> (io/file path)
        (.listFiles)
        (filter #(.isDirectory %))
@@ -108,13 +109,16 @@
 
 (defn move-dir! [to from]
   (log "Movendo " from " -> " to)
-  #_(.renameTo (io/file from) (io/file to)))
+  (.renameTo (io/file from) (io/file to))
+  to)
 
 (defn get-new-dir [mat base path]
+  (log "Pegando nome correto para " path)
   (let [new-path (->> (get-pom-exc path) (download mat) (get-path base))]
     new-path))
 
 (defn organize [{:keys [mat path]}]
-  (->> (get-subdirs path)
-       (map #(vector (get-new-dir mat path %) %))
-       (map #(apply move-dir! %))))
+  (doseq [p (get-subdirs path)]
+    (->> p
+         (#(vector (get-new-dir mat path %) %))
+         (#(apply move-dir! %)))))
