@@ -44,17 +44,22 @@
   (println "=== EASY LEDA ===")
   (println "================="))
 
+(defn organize []
+  (lc/organize (user-conf)))
+
 (defn i-mode []
-  (let [inp (read-input "Insira um comando (dl/conf): ")]
+  (let [inp (read-input "Insira um comando (dl/conf/org): ")]
     (when inp
       (condp = (clojure.string/lower-case inp)
         "dl" (get-exercise (read-input "Insira o id do roteiro (RXX/PPX/AXX/RRX): "))
+        "org" (organize)
         "conf" (read-conf)
         (println "o/")))))
 
 (defn args-mode [[cmd exc & _]]
   (condp = cmd
     "dl" (if exc (get-exercise exc) (println "Necessario um id de roteiro para baixar."))
+    "org" (organize)
     "conf" (read-conf)
     (println "comando " (str "\"" cmd "\"") "nao reconhecido.")))
 

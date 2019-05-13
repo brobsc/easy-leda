@@ -87,3 +87,34 @@
          (dl->folder! path)
          (update-pom! exc mat g1)
          (display-cmd))))
+
+(defn get-pom-exc [path]
+  (some->> (io/file path "pom.xml")
+           (slurp)
+           (re-find #"<roteiro>(.*)</roteiro>")
+           (last)))
+
+(defn has-valid-pom [path]
+  (if (.exists (io/file path "pom.xml"))
+    (if-let [exc (get-pom-exc path)]
+     (s/includes? exc "R") false)))
+
+(defn get-subdirs [path]
+  (->> (io/file path)
+       (.listFiles)
+       (filter #(.isDirectory %))
+       (filter has-valid-pom)
+       (mapv str)))
+
+(defn move-dir! [to from]
+  (log "Movendo " from " -> " to)
+  #_(.renameTo (io/file from) (io/file to)))
+
+(defn get-new-dir [mat base path]
+  (let [new-path (->> (get-pom-exc path) (download mat) (get-path base))]
+    new-path))
+
+(defn organize [{:keys [mat path]}]
+  (->> (get-subdirs path)
+       (map #(vector (get-new-dir mat path %) %))
+       (map #(apply move-dir! %))))
