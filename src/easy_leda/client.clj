@@ -113,7 +113,7 @@
   to)
 
 (defn get-new-dir [mat base path]
-  (log "Pegando nome correto para " path)
+  (log "Procurando nome correto para " path)
   (let [new-path (->> (get-pom-exc path) (download mat) (get-path base))]
     new-path))
 
