@@ -9,7 +9,7 @@
 (defn log [& msg]
   (println (str "[LOG]: " (apply str msg))))
 
-(defn download [mat exc]
+(defn get-exc-data [mat exc]
   (log (str "Pegando conteudo do exercicio " exc))
   (client/post download-url
                {:headers {:upgrade-insecure-requests 1
@@ -20,8 +20,13 @@
                               :matricula mat}
                 :as :stream}))
 
+(defmulti dir? (fn [arg] (class arg)))
+(defmethod dir? java.io.File [file] (.isDirectory file))
+(defmethod dir? java.util.zip.ZipEntry [entry] (.isDirectory entry))
+(defmethod dir? String [arg] (.isDirectory (io/file arg)))
+
 (defn zip-entry->file! [^ZipEntry entry zip out]
-  (when-not (.isDirectory entry)
+  (when-not (dir? entry)
     (log (str "Extraindo " (.getName entry)))
     (let [file (io/file out (.getName entry))
           buff-size 4096
@@ -34,11 +39,13 @@
             (.write out-file buffer 0 size)
             (recur (.read zip buffer))))))))
 
-(defn get-path [out res]
-  (str out
-       (get
-         (re-find #"filename=\"(R.*)-environment.zip\""
-                  (get-in res [:headers :content-disposition])) 1)))
+(defn res->filename [res]
+  ((re-find #"filename=\"(R.*)-environment.zip\""
+            (get-in res [:headers :content-disposition])) 1))
+
+(defn full-path [out res]
+  (->> (res->filename res)
+       (str out)))
 
 (defn stream->files! [out ^ZipInputStream zip-stream]
   (log "Preparando para extrair arquivos para " out "...")
@@ -57,78 +64,77 @@
 
 (defn dl->folder! [out res]
   (log "Preparando arquivos...")
-  (->> res
-       (res->stream)
-       (stream->files! (get-path out res))))
+  (->> (res->stream res)
+       (stream->files! (full-path out res))))
 
-(defn get-exc-name [exc g1]
+(defn exc-name [exc g1]
   (format "%s-%s" exc (if g1 "01" "02")))
 
 (defn update-pom! [exc mat g1 path]
   (log "Atualizando arquivo pom...")
   (let [pom-path (io/file path "pom.xml")
         pom (slurp pom-path)
-        exc-name (get-exc-name exc g1)]
+        exc-name* (exc-name exc g1)]
     (-> pom
         (s/replace #"<matricula>(.*)</matricula>" (str "<matricula>" mat "</matricula>"))
-        (s/replace #"<roteiro>(.*)</roteiro>" (str "<roteiro>" exc-name "</roteiro>"))
+        (s/replace #"<roteiro>(.*)</roteiro>" (str "<roteiro>" exc-name* "</roteiro>"))
         (io/copy pom-path)))
   path)
 
-(defn display-cmd [path]
+(defn print-cmd [path]
   (log "Exercicio baixado com sucesso!")
   (log "Execute:")
   (println "$" "cd" path "&&" "mvn install -DskipTests"))
 
 (defn get-exercise [exc {:keys [mat g1 path]}]
   (log "Iniciando download de exercicio...")
-  (let [exc-name (get-exc-name exc g1)]
-    (->> (download mat exc-name)
+  (let [exc-name* (exc-name exc g1)]
+    (->> (get-exc-data mat exc-name*)
          (dl->folder! path)
          (update-pom! exc mat g1)
-         (display-cmd))))
+         (print-cmd))))
 
-(defn get-pom-exc [path]
-  (some->> (io/file path "pom.xml")
-           (slurp)
-           (re-find #"<roteiro>(.*)</roteiro>")
-           (last)))
+(defn pom-exc [path]
+  (->> (io/file path "pom.xml")
+       (slurp)
+       (re-find #"<roteiro>(.*)</roteiro>")
+       (last)))
 
-(defn has-valid-pom [path]
+(defn valid-pom? [path]
   (boolean (when (.exists (io/file path "pom.xml"))
-             (when-let [exc (get-pom-exc path)]
+             (when-let [exc (pom-exc path)]
                (s/includes? exc "R")))))
 
-(defn is-dir [^java.io.File file]
-  (.isDirectory file))
+(defn files [^java.io.File arg]
+  (.listFiles arg))
 
-(defn get-subdirs [path]
+(defn subdirs [path]
   (log "Localizando diretorios de LEDA...")
   (->> (io/file path)
-       (.listFiles)
-       (filter is-dir)
-       (filter has-valid-pom)
+       (files)
+       (filter dir?)
+       (filter valid-pom?)
        (mapv str)))
 
-(defn move-dir! [to from]
-  (if-not (= to from)
+(defn move! [from to]
+  (if-not (= from to)
     (do
       (log "Movendo " from " -> " to)
       (.renameTo (io/file from) (io/file to)))
     (log "Diretorio " from " ja tem o nome correto"))
   to)
 
-(defn get-new-dir [mat base path]
+(defn new-dir [mat base path]
   (log "Procurando nome correto para " path)
-  (->> (get-pom-exc path)
-       (download mat)
-       (get-path base)))
+  (->> (pom-exc path)
+       (get-exc-data mat)
+       (full-path base)))
 
 (defn organize [{:keys [mat path]}]
-  (let [get-new-dir* (partial get-new-dir mat path)
-        move-dir!* (partial apply move-dir!)
-        get-from-to (juxt get-new-dir* identity)]
-    (->> (get-subdirs path)
+  (let [new-dir* (partial new-dir mat path)
+        get-from-to (juxt identity new-dir*)
+        move!* (partial apply move!)]
+    (->> (subdirs path)
          (map get-from-to)
-         (map move-dir!*)
+         (map move!*)
          (mapv str))))
