@@ -1,6 +1,5 @@
-(ns dev
+(ns easy-leda.dev
   (:require [easy-leda.core]
-            [nrepl.cmdline :as nrepl]
             [reply.main :as reply]))
 
 (defn -main []

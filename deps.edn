@@ -1,15 +1,19 @@
 {:paths ["src"]
- :deps {clj-http {:mvn/version "3.10.0"}
-        org.clojure/data.zip {:mvn/version "0.1.3"}
-        org.clojure/data.xml {:mvn/version "0.2.0-alpha5"}}
- :aliases {:dev {:extra-deps {nrepl {:mvn/version "0.6.0"}
+ :deps {org.clojure/clojure {:mvn/version "1.10.0"}
+        clj-http {:mvn/version "3.10.0"}}
+ :aliases {:dev {:extra-paths ["dev/src"]
+                 :extra-deps {nrepl {:mvn/version "0.6.0"}
                               reply {:mvn/version "0.4.3"}}
-                 :main-opts ["-m" "dev"]}
-           :pack {:extra-deps {pack/pack.alpha {:git/url "https://github.com/juxt/pack.alpha.git"
-                                                :sha "81b9e47d992b17aa3e3af1a47aed1f0287ebe9b8"}}
-                  :main-opts ["-m"]}
-           :build {:extra-deps {pack/pack.alpha {:git/url "https://github.com/juxt/pack.alpha.git"
-                                                  :sha "81b9e47d992b17aa3e3af1a47aed1f0287ebe9b8"}}
-                    :main-opts ["-m" "mach.pack.alpha.capsule" "easy-leda.jar" "--application-id" "easy-leda"
-                                "--application-version" "\"0.1.0\"" "-m" "easy-leda.core"]}
-           :run {:main-opts ["-m" "easy-leda.core"]}}}
+                 :main-opts ["-m" "easy-leda.dev"]}
+
+           :run {:main-opts ["-m" "easy-leda.core"]}
+
+           :cambada {:extra-deps {cambada/cambada {:mvn/version "1.0.4"}}}
+
+           :uberjar {:main-opts ["-m" "cambada.uberjar"
+                                 "--app-version" "0.2.0"
+                                 "-m" "easy_leda.core"]}}
+
+ ;; mvn/repos required because of cambada bug
+ :mvn/repos {"central" {:url "https://repo1.maven.org/maven2/"}
+             "clojars" {:url "https://repo.clojars.org/"}}}
