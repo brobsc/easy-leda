@@ -108,8 +108,11 @@
        (mapv str)))
 
 (defn move-dir! [to from]
-  (log "Movendo " from " -> " to)
-  (.renameTo (io/file from) (io/file to))
+  (if-not (= to from)
+    (do
+      (log "Movendo " from " -> " to)
+      (.renameTo (io/file from) (io/file to)))
+    (log "Diretorio " from " ja tem o nome correto"))
   to)
 
 (defn get-new-dir [mat base path]
