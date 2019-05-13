@@ -121,7 +121,7 @@
     new-path))
 
 (defn organize [{:keys [mat path]}]
-  (doseq [p (get-subdirs path)]
-    (->> p
-         (#(vector (get-new-dir mat path %) %))
-         (#(apply move-dir! %)))))
+  (->> (get-subdirs path)
+       (map (juxt #(get-new-dir mat path %) identity))
+       (map (partial apply move-dir!))
+       (mapv str)))
