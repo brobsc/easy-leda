@@ -1,0 +1,1756 @@
+({:tag :a,
+  :attrs {:href "./reports/Roteiro-Revisao-Heranca-environment.zip"},
+  :content ("Material auxiliar da video aula")}
+ {:tag :a,
+  :attrs
+  {:href
+   "https://docs.google.com/a/computacao.ufcg.edu.br/viewer?a=v&pid=sites&srcid=Y29tcHV0YWNhby51ZmNnLmVkdS5icnxsZWRhdWZjZ3xneDoxY2FiMzc3N2I4Y2VhYjA0",
+   :target "_blank"},
+  :content
+  ("Atividade de revisão de Java (conceitos básicos, herança).")}
+ {:tag :a,
+  :attrs
+  {:href
+   "https://docs.google.com/a/computacao.ufcg.edu.br/viewer?a=v&pid=sites&srcid=Y29tcHV0YWNhby51ZmNnLmVkdS5icnxsZWRhdWZjZ3xneDoyMGE2YTcwOTY2NzIxODY0",
+   :target "_blank"},
+  :content ("professor")}
+ {:tag :a,
+  :attrs {:href "https://youtu.be/dJ9qO--ZDIw", :target "_blank"},
+  :content ("Padrão de Codificação a ser seguido na disciplina")}
+ {:tag :a,
+  :attrs {:href "https://youtu.be/acR_xIAxlFg", :target "_blank"},
+  :content ("Estudo de caso: sistema bancário")}
+ {:tag :a,
+  :attrs {:href "https://youtu.be/nCHB-MPGzFE", :target "_blank"},
+  :content ("Herança com Redefinição")}
+ {:tag :a,
+  :attrs {:href "https://youtu.be/RRyb1q7iGO8", :target "_blank"},
+  :content ("Lidando com casts (parte 1)")}
+ {:tag :a,
+  :attrs {:href "https://youtu.be/7ZduWrsQyrs", :target "_blank"},
+  :content ("Polimorfismo de subtipo")}
+ {:tag :a,
+  :attrs {:href "https://youtu.be/nBXJGpR5-pE", :target "_blank"},
+  :content ("Classes abstratas")}
+ {:tag :a,
+  :attrs {:href "https://youtu.be/nWMNexTCbew", :target "_blank"},
+  :content ("Lidando com casts (parte 2)")}
+ {:tag :a,
+  :attrs
+  {:href "requestDownload?id=RR1-01",
+   :data-toggle "tooltip",
+   :data-placement "top",
+   :title "Download environment"},
+  :content ("Revisao: interfaces e arrays")}
+ {:tag :a,
+  :attrs
+  {:href "report?id=RR1-01",
+   :data-toggle "tooltip",
+   :data-placement "right",
+   :title "Disponível a partir de 20/03/2019 16:00",
+   :_ "_"},
+  :content ("Notas da atividade")}
+ {:tag :a,
+  :attrs
+  {:class "btn-link",
+   :role "button",
+   :style "color:blue",
+   :onclick
+   "parent.window.location.replace((parent.window.location.href).replace('/menu','/menuCorrecao?id=RR1-01'));",
+   :data-toggle "tooltip",
+   :data-placement "top",
+   :title "Reservado para corretores"},
+  :content ("Correção")}
+ {:tag :a,
+  :attrs {:href "https://youtu.be/JsybC56hYHU", :target "_blank"},
+  :content ("Revisao sobre interfaces")}
+ {:tag :a,
+  :attrs {:href "https://youtu.be/78wAcs2PoK8", :target "_blank"},
+  :content ("Vídeo explicativo")}
+ {:tag :a,
+  :attrs
+  {:href "requestDownload?id=RR2-01",
+   :data-toggle "tooltip",
+   :data-placement "top",
+   :title "Download environment"},
+  :content
+  ("Revisão: genéricos, collections "
+   {:tag :br, :attrs nil, :content nil}
+   " e comparator")}
+ {:tag :a,
+  :attrs
+  {:href "report?id=RR2-01",
+   :data-toggle "tooltip",
+   :data-placement "right",
+   :title "Disponível a partir de 23/03/2019 14:00",
+   :_ "_"},
+  :content ("Notas da atividade")}
+ {:tag :a,
+  :attrs
+  {:class "btn-link",
+   :role "button",
+   :style "color:blue",
+   :onclick
+   "parent.window.location.replace((parent.window.location.href).replace('/menu','/menuCorrecao?id=RR2-01'));",
+   :data-toggle "tooltip",
+   :data-placement "top",
+   :title "Reservado para corretores"},
+  :content ("Correção")}
+ {:tag :a,
+  :attrs {:href "https://youtu.be/G66xxgBuRkM", :target "_blank"},
+  :content ("Tipos genéricos (parte 1)")}
+ {:tag :a,
+  :attrs {:href "https://youtu.be/TojvTQM5YIU", :target "_blank"},
+  :content ("Tipos genéricos (parte 2)")}
+ {:tag :a,
+  :attrs {:href "https://youtu.be/kHAi4ozU81k", :target "_blank"},
+  :content ("Vídeo explicativo")}
+ {:tag :a,
+  :attrs
+  {:href "requestDownload?id=RR3-01",
+   :data-toggle "tooltip",
+   :data-placement "top",
+   :title "Download environment"},
+  :content ("Revisão: recursão e Junit")}
+ {:tag :a,
+  :attrs
+  {:href "report?id=RR3-01",
+   :data-toggle "tooltip",
+   :data-placement "right",
+   :title "Disponível a partir de 27/03/2019 16:00",
+   :_ "_"},
+  :content ("Notas da atividade")}
+ {:tag :a,
+  :attrs
+  {:class "btn-link",
+   :role "button",
+   :style "color:blue",
+   :onclick
+   "parent.window.location.replace((parent.window.location.href).replace('/menu','/menuCorrecao?id=RR3-01'));",
+   :data-toggle "tooltip",
+   :data-placement "top",
+   :title "Reservado para corretores"},
+  :content ("Correção")}
+ {:tag :a,
+  :attrs
+  {:href
+   "http://wilkerson.computacao.ufcg.edu.br/palestras/ENECOMP2008_Tutorial.pdf?attredirects=0",
+   :target "_blank"},
+  :content ("Apresentação sobre JUnit")}
+ {:tag :a,
+  :attrs {:href "https://youtu.be/AZ-k5JSiVjw", :target "_blank"},
+  :content ("Recursão (parte 1)")}
+ {:tag :a,
+  :attrs {:href "https://youtu.be/p0xXrUL8snw", :target "_blank"},
+  :content ("Recursão (parte 2)")}
+ {:tag :a,
+  :attrs {:href "https://youtu.be/m9ZOJvPHDKY", :target "_blank"},
+  :content ("Exemplo de recursao 01")}
+ {:tag :a,
+  :attrs {:href "https://youtu.be/TfqWijGZb4g", :target "_blank"},
+  :content ("Exemplos de recursão 02")}
+ {:tag :a,
+  :attrs {:href "https://youtu.be/wVlIWkPyS4o", :target "_blank"},
+  :content ("Exemplos de recursão 03")}
+ {:tag :a,
+  :attrs {:href "https://youtu.be/dfnTLRurh8w", :target "_blank"},
+  :content ("Vídeo explicativo")}
+ {:tag :a,
+  :attrs
+  {:href "requestDownload?id=R01-01",
+   :data-toggle "tooltip",
+   :data-placement "top",
+   :title "Download environment"},
+  :content ("Ordenação por comparação")}
+ {:tag :a,
+  :attrs
+  {:href "report?id=R01-01",
+   :data-toggle "tooltip",
+   :data-placement "right",
+   :title "Disponível a partir de 30/03/2019 14:00",
+   :_ "_"},
+  :content ("Notas da atividade")}
+ {:tag :a,
+  :attrs
+  {:class "btn-link",
+   :role "button",
+   :style "color:blue",
+   :onclick
+   "parent.window.location.replace((parent.window.location.href).replace('/menu','/menuCorrecao?id=R01-01'));",
+   :data-toggle "tooltip",
+   :data-placement "top",
+   :title "Reservado para corretores"},
+  :content ("Correção")}
+ {:tag :a,
+  :attrs {:href "http://youtu.be/uoO_Cn_xmmk?hd=1", :target "_blank"},
+  :content ("Vídeo explicativo")}
+ {:tag :a,
+  :attrs
+  {:href "requestDownload?id=R02-01",
+   :data-toggle "tooltip",
+   :data-placement "top",
+   :title "Download environment"},
+  :content ("Ordenação por comparação ")}
+ {:tag :a,
+  :attrs
+  {:href "report?id=R02-01",
+   :data-toggle "tooltip",
+   :data-placement "right",
+   :title "Disponível a partir de 03/04/2019 16:00",
+   :_ "_"},
+  :content ("Notas da atividade")}
+ {:tag :a,
+  :attrs
+  {:class "btn-link",
+   :role "button",
+   :style "color:blue",
+   :onclick
+   "parent.window.location.replace((parent.window.location.href).replace('/menu','/menuCorrecao?id=R02-01'));",
+   :data-toggle "tooltip",
+   :data-placement "top",
+   :title "Reservado para corretores"},
+  :content ("Correção")}
+ {:tag :a,
+  :attrs {:href "https://youtu.be/7eFAaKE5qNo", :target "_blank"},
+  :content ("Vídeo explicativo")}
+ {:tag :a,
+  :attrs
+  {:href "requestDownload?id=R03-01",
+   :data-toggle "tooltip",
+   :data-placement "top",
+   :title "Download environment"},
+  :content ("Ordenação em tempo linear")}
+ {:tag :a,
+  :attrs
+  {:href "report?id=R03-01",
+   :data-toggle "tooltip",
+   :data-placement "right",
+   :title "Disponível a partir de 06/04/2019 14:00",
+   :_ "_"},
+  :content ("Notas da atividade")}
+ {:tag :a,
+  :attrs
+  {:class "btn-link",
+   :role "button",
+   :style "color:blue",
+   :onclick
+   "parent.window.location.replace((parent.window.location.href).replace('/menu','/menuCorrecao?id=R03-01'));",
+   :data-toggle "tooltip",
+   :data-placement "top",
+   :title "Reservado para corretores"},
+  :content ("Correção")}
+ {:tag :a,
+  :attrs {:href "https://youtu.be/vg9XKn7Oe1Y", :target "_blank"},
+  :content ("Vídeo explicativo")}
+ {:tag :a,
+  :attrs
+  {:href "requestDownload?id=R04-01",
+   :data-toggle "tooltip",
+   :data-placement "top",
+   :title "Download environment"},
+  :content ("Estatística de ordem e busca binária")}
+ {:tag :a,
+  :attrs
+  {:href "report?id=R04-01",
+   :data-toggle "tooltip",
+   :data-placement "right",
+   :title "Disponível a partir de 10/04/2019 16:00",
+   :_ "_"},
+  :content ("Notas da atividade")}
+ {:tag :a,
+  :attrs
+  {:class "btn-link",
+   :role "button",
+   :style "color:blue",
+   :onclick
+   "parent.window.location.replace((parent.window.location.href).replace('/menu','/menuCorrecao?id=R04-01'));",
+   :data-toggle "tooltip",
+   :data-placement "top",
+   :title "Reservado para corretores"},
+  :content ("Correção")}
+ {:tag :a,
+  :attrs {:href "https://youtu.be/deTn5xQ42bU", :target "_blank"},
+  :content ("Vídeo explicativo")}
+ {:tag :a,
+  :attrs
+  {:href "requestDownload?id=PP1-01",
+   :data-toggle "tooltip",
+   :data-placement "top",
+   :title "Download environment"},
+  :content ("Prova prática 1")}
+ {:tag :a,
+  :attrs
+  {:href "report?id=PP1-01",
+   :data-toggle "tooltip",
+   :data-placement "right",
+   :title "Disponível a partir de 11/04/2019 16:00",
+   :_ "_"},
+  :content ("Notas da atividade")}
+ {:tag :a,
+  :attrs
+  {:class "btn-link",
+   :role "button",
+   :style "color:blue",
+   :onclick
+   "parent.window.location.replace((parent.window.location.href).replace('/menu','/menuCorrecao?id=PP1-01'));",
+   :data-toggle "tooltip",
+   :data-placement "top",
+   :title "Reservado para corretores"},
+  :content ("Correção")}
+ {:tag :a,
+  :attrs {:href "http://150.165.85.29:81/horaAtual"},
+  :content ("hora atual do servidor")}
+ {:tag :a,
+  :attrs {:href "https://youtu.be/kFpQcyfiMh4", :target "_blank"},
+  :content ("Design esperado")}
+ {:tag :a,
+  :attrs
+  {:href "requestDownload?id=R05-01",
+   :data-toggle "tooltip",
+   :data-placement "top",
+   :title "Download environment"},
+  :content ("Tipo Abstrato de Dado")}
+ {:tag :a,
+  :attrs
+  {:href "report?id=R05-01",
+   :data-toggle "tooltip",
+   :data-placement "right",
+   :title "Disponível a partir de 17/04/2019 16:00",
+   :_ "_"},
+  :content ("Notas da atividade")}
+ {:tag :a,
+  :attrs
+  {:class "btn-link",
+   :role "button",
+   :style "color:blue",
+   :onclick
+   "parent.window.location.replace((parent.window.location.href).replace('/menu','/menuCorrecao?id=R05-01'));",
+   :data-toggle "tooltip",
+   :data-placement "top",
+   :title "Reservado para corretores"},
+  :content ("Correção")}
+ {:tag :a,
+  :attrs
+  {:href "requestDownload?id=R06-01",
+   :data-toggle "tooltip",
+   :data-placement "top",
+   :title "Download environment"},
+  :content ("Lista ligada (iterativa)")}
+ {:tag :a,
+  :attrs
+  {:href "report?id=R06-01",
+   :data-toggle "tooltip",
+   :data-placement "right",
+   :title "Disponível a partir de 24/04/2019 16:00",
+   :_ "_"},
+  :content ("Notas da atividade")}
+ {:tag :a,
+  :attrs
+  {:class "btn-link",
+   :role "button",
+   :style "color:blue",
+   :onclick
+   "parent.window.location.replace((parent.window.location.href).replace('/menu','/menuCorrecao?id=R06-01'));",
+   :data-toggle "tooltip",
+   :data-placement "top",
+   :title "Reservado para corretores"},
+  :content ("Correção")}
+ {:tag :a,
+  :attrs {:href "https://youtu.be/LkI-pNK7uyg", :target "_blank"},
+  :content ("Vídeo explicativo")}
+ {:tag :a,
+  :attrs
+  {:href "requestDownload?id=R07-01",
+   :data-toggle "tooltip",
+   :data-placement "top",
+   :title "Download environment"},
+  :content ("Lista ligada (recursiva)")}
+ {:tag :a,
+  :attrs
+  {:href "report?id=R07-01",
+   :data-toggle "tooltip",
+   :data-placement "right",
+   :title "Disponível a partir de 27/04/2019 14:00",
+   :_ "_"},
+  :content ("Notas da atividade")}
+ {:tag :a,
+  :attrs
+  {:class "btn-link",
+   :role "button",
+   :style "color:blue",
+   :onclick
+   "parent.window.location.replace((parent.window.location.href).replace('/menu','/menuCorrecao?id=R07-01'));",
+   :data-toggle "tooltip",
+   :data-placement "top",
+   :title "Reservado para corretores"},
+  :content ("Correção")}
+ {:tag :a,
+  :attrs {:href "https://youtu.be/VdVHoJQs34E", :target "_blank"},
+  :content ("Vídeo explicativo")}
+ {:tag :a,
+  :attrs
+  {:href "requestDownload?id=R08-01",
+   :data-toggle "tooltip",
+   :data-placement "top",
+   :title "Download environment"},
+  :content ("Tabelas Hash (endereçamento fechado)")}
+ {:tag :a,
+  :attrs
+  {:href "report?id=R08-01",
+   :data-toggle "tooltip",
+   :data-placement "right",
+   :title "Disponível a partir de 01/05/2019 16:00",
+   :_ "_"},
+  :content ("Notas da atividade")}
+ {:tag :a,
+  :attrs
+  {:class "btn-link",
+   :role "button",
+   :style "color:blue",
+   :onclick
+   "parent.window.location.replace((parent.window.location.href).replace('/menu','/menuCorrecao?id=R08-01'));",
+   :data-toggle "tooltip",
+   :data-placement "top",
+   :title "Reservado para corretores"},
+  :content ("Correção")}
+ {:tag :a,
+  :attrs {:href "https://youtu.be/DxSuWHxTDnA", :target "_blank"},
+  :content ("Vídeo explicativo")}
+ {:tag :a,
+  :attrs
+  {:href "requestDownload?id=R09-01",
+   :data-toggle "tooltip",
+   :data-placement "top",
+   :title "Download environment"},
+  :content ("Tabelas Hash (endereçamento aberto)")}
+ {:tag :a,
+  :attrs
+  {:href "report?id=R09-01",
+   :data-toggle "tooltip",
+   :data-placement "right",
+   :title "Disponível a partir de 04/05/2019 14:00",
+   :_ "_"},
+  :content ("Notas da atividade")}
+ {:tag :a,
+  :attrs
+  {:class "btn-link",
+   :role "button",
+   :style "color:blue",
+   :onclick
+   "parent.window.location.replace((parent.window.location.href).replace('/menu','/menuCorrecao?id=R09-01'));",
+   :data-toggle "tooltip",
+   :data-placement "top",
+   :title "Reservado para corretores"},
+  :content ("Correção")}
+ {:tag :a,
+  :attrs {:href "https://youtu.be/Ajh1QvO2GjM", :target "_blank"},
+  :content ("Vídeo explicativo")}
+ {:tag :a,
+  :attrs
+  {:href "requestDownload?id=R10-01",
+   :data-toggle "tooltip",
+   :data-placement "top",
+   :title "Download environment"},
+  :content ("Set Linked List")}
+ {:tag :a,
+  :attrs
+  {:href "report?id=R10-01",
+   :data-toggle "tooltip",
+   :data-placement "right",
+   :title "Disponível a partir de 08/05/2019 16:00",
+   :_ "_"},
+  :content ("Notas da atividade")}
+ {:tag :a,
+  :attrs
+  {:class "btn-link",
+   :role "button",
+   :style "color:blue",
+   :onclick
+   "parent.window.location.replace((parent.window.location.href).replace('/menu','/menuCorrecao?id=R10-01'));",
+   :data-toggle "tooltip",
+   :data-placement "top",
+   :title "Reservado para corretores"},
+  :content ("Correção")}
+ {:tag :a,
+  :attrs
+  {:href "requestDownload?id=PP2-01",
+   :data-toggle "tooltip",
+   :data-placement "top",
+   :title "Download environment"},
+  :content ("Prova Prática 2")}
+ {:tag :a,
+  :attrs
+  {:href "report?id=PP2-01",
+   :data-toggle "tooltip",
+   :data-placement "right",
+   :title "Disponível a partir de 09/05/2019 16:20",
+   :_ "_"},
+  :content ("Notas da atividade")}
+ {:tag :a,
+  :attrs
+  {:class "btn-link",
+   :role "button",
+   :style "color:blue",
+   :onclick
+   "parent.window.location.replace((parent.window.location.href).replace('/menu','/menuCorrecao?id=PP2-01'));",
+   :data-toggle "tooltip",
+   :data-placement "top",
+   :title "Reservado para corretores"},
+  :content ("Correção")}
+ {:tag :a,
+  :attrs {:href "http://150.165.85.29:81/horaAtual"},
+  :content ("hora atual do servidor")}
+ {:tag :a,
+  :attrs {:href "https://youtu.be/dSXDV1-8-uk", :target "_blank"},
+  :content ("Design esperado")}
+ {:tag :a,
+  :attrs
+  {:href "#",
+   :data-toggle "tooltip",
+   :data-placement "top",
+   :title "Disponível a partir da data e hora de liberação"},
+  :content ("Árvore Binária da Busca")}
+ {:tag :a,
+  :attrs
+  {:href "report?id=R11-01",
+   :data-toggle "tooltip",
+   :data-placement "right",
+   :title "Disponível a partir de 18/05/2019 14:00",
+   :_ "_"},
+  :content ("Notas da atividade")}
+ {:tag :a,
+  :attrs
+  {:class "btn-link",
+   :role "button",
+   :style "color:blue",
+   :onclick
+   "parent.window.location.replace((parent.window.location.href).replace('/menu','/menuCorrecao?id=R11-01'));",
+   :data-toggle "tooltip",
+   :data-placement "top",
+   :title "Reservado para corretores"},
+  :content ("Correção")}
+ {:tag :a,
+  :attrs
+  {:href
+   "https://sites.google.com/a/computacao.ufcg.edu.br/edaufcg/crono/cronograma-t1/Padrao%20de%20projeto%20comparator%20em%20colecoes%20e%20builder.pdf?attredirects=0&d=1"},
+  :content ("aqui")}
+ {:tag :a,
+  :attrs {:href "https://youtu.be/95nEFrvpi_0", :target "_blank"},
+  :content ("Vídeo explicativo")}
+ {:tag :a,
+  :attrs
+  {:href "#",
+   :data-toggle "tooltip",
+   :data-placement "top",
+   :title "Disponível a partir da data e hora de liberação"},
+  :content ("Extensão de árvore binária de busca")}
+ {:tag :a,
+  :attrs
+  {:href "report?id=R12-01",
+   :data-toggle "tooltip",
+   :data-placement "right",
+   :title "Disponível a partir de 22/05/2019 16:00",
+   :_ "_"},
+  :content ("Notas da atividade")}
+ {:tag :a,
+  :attrs
+  {:class "btn-link",
+   :role "button",
+   :style "color:blue",
+   :onclick
+   "parent.window.location.replace((parent.window.location.href).replace('/menu','/menuCorrecao?id=R12-01'));",
+   :data-toggle "tooltip",
+   :data-placement "top",
+   :title "Reservado para corretores"},
+  :content ("Correção")}
+ {:tag :a,
+  :attrs {:href "https://youtu.be/TbcXE4kJtl8", :target "_blank"},
+  :content ("Vídeo explicativo")}
+ {:tag :a,
+  :attrs
+  {:href "#",
+   :data-toggle "tooltip",
+   :data-placement "top",
+   :title "Disponível a partir da data e hora de liberação"},
+  :content ("Heap Binária")}
+ {:tag :a,
+  :attrs
+  {:href "report?id=R13-01",
+   :data-toggle "tooltip",
+   :data-placement "right",
+   :title "Disponível a partir de 25/05/2019 14:00",
+   :_ "_"},
+  :content ("Notas da atividade")}
+ {:tag :a,
+  :attrs
+  {:class "btn-link",
+   :role "button",
+   :style "color:blue",
+   :onclick
+   "parent.window.location.replace((parent.window.location.href).replace('/menu','/menuCorrecao?id=R13-01'));",
+   :data-toggle "tooltip",
+   :data-placement "top",
+   :title "Reservado para corretores"},
+  :content ("Correção")}
+ {:tag :a,
+  :attrs {:href "https://youtu.be/LLwZBm2R_ic", :target "_blank"},
+  :content ("Vídeo explicativo")}
+ {:tag :a,
+  :attrs
+  {:href "#",
+   :data-toggle "tooltip",
+   :data-placement "top",
+   :title "Disponível a partir da data e hora de liberação"},
+  :content ("AVL")}
+ {:tag :a,
+  :attrs
+  {:href "report?id=R14-01",
+   :data-toggle "tooltip",
+   :data-placement "right",
+   :title "Disponível a partir de 29/05/2019 16:00",
+   :_ "_"},
+  :content ("Notas da atividade")}
+ {:tag :a,
+  :attrs
+  {:class "btn-link",
+   :role "button",
+   :style "color:blue",
+   :onclick
+   "parent.window.location.replace((parent.window.location.href).replace('/menu','/menuCorrecao?id=R14-01'));",
+   :data-toggle "tooltip",
+   :data-placement "top",
+   :title "Reservado para corretores"},
+  :content ("Correção")}
+ {:tag :a,
+  :attrs {:href "https://youtu.be/etZcUeP7yfI", :target "_blank"},
+  :content ("Vídeo explicativo")}
+ {:tag :a,
+  :attrs
+  {:href "#",
+   :data-toggle "tooltip",
+   :data-placement "top",
+   :title "Disponível a partir da data e hora de liberação"},
+  :content ("Extensão de AVL")}
+ {:tag :a,
+  :attrs
+  {:href "report?id=R15-01",
+   :data-toggle "tooltip",
+   :data-placement "right",
+   :title "Disponível a partir de 01/06/2019 14:00",
+   :_ "_"},
+  :content ("Notas da atividade")}
+ {:tag :a,
+  :attrs
+  {:class "btn-link",
+   :role "button",
+   :style "color:blue",
+   :onclick
+   "parent.window.location.replace((parent.window.location.href).replace('/menu','/menuCorrecao?id=R15-01'));",
+   :data-toggle "tooltip",
+   :data-placement "top",
+   :title "Reservado para corretores"},
+  :content ("Correção")}
+ {:tag :a,
+  :attrs {:href "https://youtu.be/bC-M6BMYn8I", :target "_blank"},
+  :content ("Vídeo explicativo")}
+ {:tag :a,
+  :attrs
+  {:href "#",
+   :data-toggle "tooltip",
+   :data-placement "top",
+   :title "Disponível a partir da data e hora de liberação"},
+  :content ("Skip List")}
+ {:tag :a,
+  :attrs
+  {:href "report?id=R16-01",
+   :data-toggle "tooltip",
+   :data-placement "right",
+   :title "Disponível a partir de 05/06/2019 16:00",
+   :_ "_"},
+  :content ("Notas da atividade")}
+ {:tag :a,
+  :attrs
+  {:class "btn-link",
+   :role "button",
+   :style "color:blue",
+   :onclick
+   "parent.window.location.replace((parent.window.location.href).replace('/menu','/menuCorrecao?id=R16-01'));",
+   :data-toggle "tooltip",
+   :data-placement "top",
+   :title "Reservado para corretores"},
+  :content ("Correção")}
+ {:tag :a,
+  :attrs {:href "https://youtu.be/EbzOAA23W9o", :target "_blank"},
+  :content ("Vídeo explicativo")}
+ {:tag :a,
+  :attrs
+  {:href "#",
+   :data-toggle "tooltip",
+   :data-placement "top",
+   :title "Disponível a partir da data e hora de liberação"},
+  :content ("Arvore PV")}
+ {:tag :a,
+  :attrs
+  {:href "report?id=R17-01",
+   :data-toggle "tooltip",
+   :data-placement "right",
+   :title "Disponível a partir de 08/06/2019 14:00",
+   :_ "_"},
+  :content ("Notas da atividade")}
+ {:tag :a,
+  :attrs
+  {:class "btn-link",
+   :role "button",
+   :style "color:blue",
+   :onclick
+   "parent.window.location.replace((parent.window.location.href).replace('/menu','/menuCorrecao?id=R17-01'));",
+   :data-toggle "tooltip",
+   :data-placement "top",
+   :title "Reservado para corretores"},
+  :content ("Correção")}
+ {:tag :a,
+  :attrs {:href "https://youtu.be/Ho_Wzs71GMo", :target "_blank"},
+  :content ("Vídeo explicativo")}
+ {:tag :a,
+  :attrs
+  {:href "#",
+   :data-toggle "tooltip",
+   :data-placement "top",
+   :title "Disponível a partir da data e hora de liberação"},
+  :content ("Arvore B")}
+ {:tag :a,
+  :attrs
+  {:href "report?id=R18-01",
+   :data-toggle "tooltip",
+   :data-placement "right",
+   :title "Disponível a partir de 12/06/2019 16:00",
+   :_ "_"},
+  :content ("Notas da atividade")}
+ {:tag :a,
+  :attrs
+  {:class "btn-link",
+   :role "button",
+   :style "color:blue",
+   :onclick
+   "parent.window.location.replace((parent.window.location.href).replace('/menu','/menuCorrecao?id=R18-01'));",
+   :data-toggle "tooltip",
+   :data-placement "top",
+   :title "Reservado para corretores"},
+  :content ("Correção")}
+ {:tag :a,
+  :attrs {:href "https://youtu.be/VjRmtSIAwCs", :target "_blank"},
+  :content ("Vídeo explicativo")}
+ {:tag :a,
+  :attrs
+  {:href "#",
+   :data-toggle "tooltip",
+   :data-placement "top",
+   :title "Disponível a partir da data e hora de liberação"},
+  :content ("Prova Prática 3")}
+ {:tag :a,
+  :attrs
+  {:href "report?id=PP3-01",
+   :data-toggle "tooltip",
+   :data-placement "right",
+   :title "Disponível a partir de 13/06/2019 16:00",
+   :_ "_"},
+  :content ("Notas da atividade")}
+ {:tag :a,
+  :attrs
+  {:class "btn-link",
+   :role "button",
+   :style "color:blue",
+   :onclick
+   "parent.window.location.replace((parent.window.location.href).replace('/menu','/menuCorrecao?id=PP3-01'));",
+   :data-toggle "tooltip",
+   :data-placement "top",
+   :title "Reservado para corretores"},
+  :content ("Correção")}
+ {:tag :a,
+  :attrs {:href "http://150.165.85.29:81/horaAtual"},
+  :content ("hora atual do servidor")}
+ {:tag :a,
+  :attrs
+  {:href "#",
+   :data-toggle "tooltip",
+   :data-placement "top",
+   :title "Disponível a partir da data e hora de liberação"},
+  :content ("Prova de Reposição 1")}
+ {:tag :a,
+  :attrs
+  {:href "report?id=PR1-01",
+   :data-toggle "tooltip",
+   :data-placement "right",
+   :title "Disponível a partir de 27/06/2019 16:00",
+   :_ "_"},
+  :content ("Notas da atividade")}
+ {:tag :a,
+  :attrs
+  {:class "btn-link",
+   :role "button",
+   :style "color:blue",
+   :onclick
+   "parent.window.location.replace((parent.window.location.href).replace('/menu','/menuCorrecao?id=PR1-01'));",
+   :data-toggle "tooltip",
+   :data-placement "top",
+   :title "Reservado para corretores"},
+  :content ("Correção")}
+ {:tag :a,
+  :attrs
+  {:href "#",
+   :data-toggle "tooltip",
+   :data-placement "top",
+   :title "Disponível a partir da data e hora de liberação"},
+  :content ("Prova de Reposição 2")}
+ {:tag :a,
+  :attrs
+  {:href "report?id=PR2-01",
+   :data-toggle "tooltip",
+   :data-placement "right",
+   :title "Disponível a partir de 27/06/2019 16:00",
+   :_ "_"},
+  :content ("Notas da atividade")}
+ {:tag :a,
+  :attrs
+  {:class "btn-link",
+   :role "button",
+   :style "color:blue",
+   :onclick
+   "parent.window.location.replace((parent.window.location.href).replace('/menu','/menuCorrecao?id=PR2-01'));",
+   :data-toggle "tooltip",
+   :data-placement "top",
+   :title "Reservado para corretores"},
+  :content ("Correção")}
+ {:tag :a,
+  :attrs
+  {:href "#",
+   :data-toggle "tooltip",
+   :data-placement "top",
+   :title "Disponível a partir da data e hora de liberação"},
+  :content ("Prova de Reposição 3")}
+ {:tag :a,
+  :attrs
+  {:href "report?id=PR3-01",
+   :data-toggle "tooltip",
+   :data-placement "right",
+   :title "Disponível a partir de 27/06/2019 16:00",
+   :_ "_"},
+  :content ("Notas da atividade")}
+ {:tag :a,
+  :attrs
+  {:class "btn-link",
+   :role "button",
+   :style "color:blue",
+   :onclick
+   "parent.window.location.replace((parent.window.location.href).replace('/menu','/menuCorrecao?id=PR3-01'));",
+   :data-toggle "tooltip",
+   :data-placement "top",
+   :title "Reservado para corretores"},
+  :content ("Correção")}
+ {:tag :a,
+  :attrs
+  {:href "#",
+   :data-toggle "tooltip",
+   :data-placement "top",
+   :title "Disponível a partir da data e hora de liberação"},
+  :content ("Prova Final")}
+ {:tag :a,
+  :attrs
+  {:href "report?id=PF1-01",
+   :data-toggle "tooltip",
+   :data-placement "right",
+   :title "Disponível a partir de 11/07/2019 16:00",
+   :_ "_"},
+  :content ("Notas da atividade")}
+ {:tag :a,
+  :attrs
+  {:class "btn-link",
+   :role "button",
+   :style "color:blue",
+   :onclick
+   "parent.window.location.replace((parent.window.location.href).replace('/menu','/menuCorrecao?id=PF1-01'));",
+   :data-toggle "tooltip",
+   :data-placement "top",
+   :title "Reservado para corretores"},
+  :content ("Correção")}
+ {:tag :a,
+  :attrs {:href "http://150.165.85.29:81/horaAtual"},
+  :content ("hora atual do servidor")}
+ {:tag :a,
+  :attrs {:href "./reports/Roteiro-Revisao-Heranca-environment.zip"},
+  :content ("Material auxiliar da video aula")}
+ {:tag :a,
+  :attrs
+  {:href
+   "https://docs.google.com/a/computacao.ufcg.edu.br/viewer?a=v&pid=sites&srcid=Y29tcHV0YWNhby51ZmNnLmVkdS5icnxsZWRhdWZjZ3xneDoxY2FiMzc3N2I4Y2VhYjA0",
+   :target "_blank"},
+  :content
+  ("Atividade de revisão de Java (conceitos básicos, herança).")}
+ {:tag :a,
+  :attrs
+  {:href
+   "https://docs.google.com/a/computacao.ufcg.edu.br/viewer?a=v&pid=sites&srcid=Y29tcHV0YWNhby51ZmNnLmVkdS5icnxsZWRhdWZjZ3xneDoyMGE2YTcwOTY2NzIxODY0",
+   :target "_blank"},
+  :content ("professor")}
+ {:tag :a,
+  :attrs {:href "https://youtu.be/dJ9qO--ZDIw", :target "_blank"},
+  :content ("Padrão de Codificação a ser seguido na disciplina")}
+ {:tag :a,
+  :attrs {:href "https://youtu.be/acR_xIAxlFg", :target "_blank"},
+  :content ("Estudo de caso: sistema bancário")}
+ {:tag :a,
+  :attrs {:href "https://youtu.be/nCHB-MPGzFE", :target "_blank"},
+  :content ("Herança com Redefinição")}
+ {:tag :a,
+  :attrs {:href "https://youtu.be/RRyb1q7iGO8", :target "_blank"},
+  :content ("Lidando com casts (parte 1)")}
+ {:tag :a,
+  :attrs {:href "https://youtu.be/7ZduWrsQyrs", :target "_blank"},
+  :content ("Polimorfismo de subtipo")}
+ {:tag :a,
+  :attrs {:href "https://youtu.be/nBXJGpR5-pE", :target "_blank"},
+  :content ("Classes abstratas")}
+ {:tag :a,
+  :attrs {:href "https://youtu.be/nWMNexTCbew", :target "_blank"},
+  :content ("Lidando com casts (parte 2)")}
+ {:tag :a,
+  :attrs
+  {:href "requestDownload?id=RR1-02",
+   :data-toggle "tooltip",
+   :data-placement "top",
+   :title "Download environment"},
+  :content ("Revisao: interfaces e arrays")}
+ {:tag :a,
+  :attrs
+  {:href "report?id=RR1-02",
+   :data-toggle "tooltip",
+   :data-placement "right",
+   :title "Disponível a partir de 20/03/2019 16:00",
+   :_ "_"},
+  :content ("Notas da atividade")}
+ {:tag :a,
+  :attrs
+  {:class "btn-link",
+   :role "button",
+   :style "color:blue",
+   :onclick
+   "parent.window.location.replace((parent.window.location.href).replace('/menu','/menuCorrecao?id=RR1-02'));",
+   :data-toggle "tooltip",
+   :data-placement "top",
+   :title "Reservado para corretores"},
+  :content ("Correção")}
+ {:tag :a,
+  :attrs {:href "https://youtu.be/JsybC56hYHU", :target "_blank"},
+  :content ("Revisao sobre interfaces")}
+ {:tag :a,
+  :attrs {:href "https://youtu.be/78wAcs2PoK8", :target "_blank"},
+  :content ("Vídeo explicativo")}
+ {:tag :a,
+  :attrs
+  {:href "requestDownload?id=RR2-02",
+   :data-toggle "tooltip",
+   :data-placement "top",
+   :title "Download environment"},
+  :content
+  ("Revisão: genéricos, collections "
+   {:tag :br, :attrs nil, :content nil}
+   " e comparator")}
+ {:tag :a,
+  :attrs
+  {:href "report?id=RR2-02",
+   :data-toggle "tooltip",
+   :data-placement "right",
+   :title "Disponível a partir de 23/03/2019 14:00",
+   :_ "_"},
+  :content ("Notas da atividade")}
+ {:tag :a,
+  :attrs
+  {:class "btn-link",
+   :role "button",
+   :style "color:blue",
+   :onclick
+   "parent.window.location.replace((parent.window.location.href).replace('/menu','/menuCorrecao?id=RR2-02'));",
+   :data-toggle "tooltip",
+   :data-placement "top",
+   :title "Reservado para corretores"},
+  :content ("Correção")}
+ {:tag :a,
+  :attrs {:href "https://youtu.be/G66xxgBuRkM", :target "_blank"},
+  :content ("Tipos genéricos (parte 1)")}
+ {:tag :a,
+  :attrs {:href "https://youtu.be/TojvTQM5YIU", :target "_blank"},
+  :content ("Tipos genéricos (parte 2)")}
+ {:tag :a,
+  :attrs {:href "https://youtu.be/kHAi4ozU81k", :target "_blank"},
+  :content ("Vídeo explicativo")}
+ {:tag :a,
+  :attrs
+  {:href "requestDownload?id=RR3-02",
+   :data-toggle "tooltip",
+   :data-placement "top",
+   :title "Download environment"},
+  :content ("Revisão: recursão e Junit")}
+ {:tag :a,
+  :attrs
+  {:href "report?id=RR3-02",
+   :data-toggle "tooltip",
+   :data-placement "right",
+   :title "Disponível a partir de 27/03/2019 16:00",
+   :_ "_"},
+  :content ("Notas da atividade")}
+ {:tag :a,
+  :attrs
+  {:class "btn-link",
+   :role "button",
+   :style "color:blue",
+   :onclick
+   "parent.window.location.replace((parent.window.location.href).replace('/menu','/menuCorrecao?id=RR3-02'));",
+   :data-toggle "tooltip",
+   :data-placement "top",
+   :title "Reservado para corretores"},
+  :content ("Correção")}
+ {:tag :a,
+  :attrs
+  {:href
+   "http://wilkerson.computacao.ufcg.edu.br/palestras/ENECOMP2008_Tutorial.pdf?attredirects=0",
+   :target "_blank"},
+  :content ("Apresentação sobre JUnit")}
+ {:tag :a,
+  :attrs {:href "https://youtu.be/AZ-k5JSiVjw", :target "_blank"},
+  :content ("Recursão (parte 1)")}
+ {:tag :a,
+  :attrs {:href "https://youtu.be/p0xXrUL8snw", :target "_blank"},
+  :content ("Recursão (parte 2)")}
+ {:tag :a,
+  :attrs {:href "https://youtu.be/m9ZOJvPHDKY", :target "_blank"},
+  :content ("Exemplo de recursao 01")}
+ {:tag :a,
+  :attrs {:href "https://youtu.be/TfqWijGZb4g", :target "_blank"},
+  :content ("Exemplos de recursão 02")}
+ {:tag :a,
+  :attrs {:href "https://youtu.be/wVlIWkPyS4o", :target "_blank"},
+  :content ("Exemplos de recursão 03")}
+ {:tag :a,
+  :attrs {:href "https://youtu.be/dfnTLRurh8w", :target "_blank"},
+  :content ("Vídeo explicativo")}
+ {:tag :a,
+  :attrs
+  {:href "requestDownload?id=R01-02",
+   :data-toggle "tooltip",
+   :data-placement "top",
+   :title "Download environment"},
+  :content ("Ordenação por comparação")}
+ {:tag :a,
+  :attrs
+  {:href "report?id=R01-02",
+   :data-toggle "tooltip",
+   :data-placement "right",
+   :title "Disponível a partir de 30/03/2019 14:00",
+   :_ "_"},
+  :content ("Notas da atividade")}
+ {:tag :a,
+  :attrs
+  {:class "btn-link",
+   :role "button",
+   :style "color:blue",
+   :onclick
+   "parent.window.location.replace((parent.window.location.href).replace('/menu','/menuCorrecao?id=R01-02'));",
+   :data-toggle "tooltip",
+   :data-placement "top",
+   :title "Reservado para corretores"},
+  :content ("Correção")}
+ {:tag :a,
+  :attrs {:href "http://youtu.be/uoO_Cn_xmmk?hd=1", :target "_blank"},
+  :content ("Vídeo explicativo")}
+ {:tag :a,
+  :attrs
+  {:href "requestDownload?id=R02-02",
+   :data-toggle "tooltip",
+   :data-placement "top",
+   :title "Download environment"},
+  :content ("Ordenação por comparação ")}
+ {:tag :a,
+  :attrs
+  {:href "report?id=R02-02",
+   :data-toggle "tooltip",
+   :data-placement "right",
+   :title "Disponível a partir de 03/04/2019 16:00",
+   :_ "_"},
+  :content ("Notas da atividade")}
+ {:tag :a,
+  :attrs
+  {:class "btn-link",
+   :role "button",
+   :style "color:blue",
+   :onclick
+   "parent.window.location.replace((parent.window.location.href).replace('/menu','/menuCorrecao?id=R02-02'));",
+   :data-toggle "tooltip",
+   :data-placement "top",
+   :title "Reservado para corretores"},
+  :content ("Correção")}
+ {:tag :a,
+  :attrs {:href "https://youtu.be/7eFAaKE5qNo", :target "_blank"},
+  :content ("Vídeo explicativo")}
+ {:tag :a,
+  :attrs
+  {:href "requestDownload?id=R03-02",
+   :data-toggle "tooltip",
+   :data-placement "top",
+   :title "Download environment"},
+  :content ("Ordenação em tempo linear")}
+ {:tag :a,
+  :attrs
+  {:href "report?id=R03-02",
+   :data-toggle "tooltip",
+   :data-placement "right",
+   :title "Disponível a partir de 06/04/2019 14:00",
+   :_ "_"},
+  :content ("Notas da atividade")}
+ {:tag :a,
+  :attrs
+  {:class "btn-link",
+   :role "button",
+   :style "color:blue",
+   :onclick
+   "parent.window.location.replace((parent.window.location.href).replace('/menu','/menuCorrecao?id=R03-02'));",
+   :data-toggle "tooltip",
+   :data-placement "top",
+   :title "Reservado para corretores"},
+  :content ("Correção")}
+ {:tag :a,
+  :attrs {:href "https://youtu.be/vg9XKn7Oe1Y", :target "_blank"},
+  :content ("Vídeo explicativo")}
+ {:tag :a,
+  :attrs
+  {:href "requestDownload?id=R04-02",
+   :data-toggle "tooltip",
+   :data-placement "top",
+   :title "Download environment"},
+  :content ("Estatística de ordem e busca binária")}
+ {:tag :a,
+  :attrs
+  {:href "report?id=R04-02",
+   :data-toggle "tooltip",
+   :data-placement "right",
+   :title "Disponível a partir de 10/04/2019 16:00",
+   :_ "_"},
+  :content ("Notas da atividade")}
+ {:tag :a,
+  :attrs
+  {:class "btn-link",
+   :role "button",
+   :style "color:blue",
+   :onclick
+   "parent.window.location.replace((parent.window.location.href).replace('/menu','/menuCorrecao?id=R04-02'));",
+   :data-toggle "tooltip",
+   :data-placement "top",
+   :title "Reservado para corretores"},
+  :content ("Correção")}
+ {:tag :a,
+  :attrs {:href "https://youtu.be/deTn5xQ42bU", :target "_blank"},
+  :content ("Vídeo explicativo")}
+ {:tag :a,
+  :attrs
+  {:href "requestDownload?id=PP1-02",
+   :data-toggle "tooltip",
+   :data-placement "top",
+   :title "Download environment"},
+  :content ("Prova prática 1")}
+ {:tag :a,
+  :attrs
+  {:href "report?id=PP1-02",
+   :data-toggle "tooltip",
+   :data-placement "right",
+   :title "Disponível a partir de 11/04/2019 16:00",
+   :_ "_"},
+  :content ("Notas da atividade")}
+ {:tag :a,
+  :attrs
+  {:class "btn-link",
+   :role "button",
+   :style "color:blue",
+   :onclick
+   "parent.window.location.replace((parent.window.location.href).replace('/menu','/menuCorrecao?id=PP1-02'));",
+   :data-toggle "tooltip",
+   :data-placement "top",
+   :title "Reservado para corretores"},
+  :content ("Correção")}
+ {:tag :a,
+  :attrs {:href "http://150.165.85.29:81/horaAtual"},
+  :content ("hora atual do servidor")}
+ {:tag :a,
+  :attrs {:href "https://youtu.be/kFpQcyfiMh4", :target "_blank"},
+  :content ("Design esperado")}
+ {:tag :a,
+  :attrs
+  {:href "requestDownload?id=R05-02",
+   :data-toggle "tooltip",
+   :data-placement "top",
+   :title "Download environment"},
+  :content ("Tipo Abstrato de Dado")}
+ {:tag :a,
+  :attrs
+  {:href "report?id=R05-02",
+   :data-toggle "tooltip",
+   :data-placement "right",
+   :title "Disponível a partir de 17/04/2019 16:00",
+   :_ "_"},
+  :content ("Notas da atividade")}
+ {:tag :a,
+  :attrs
+  {:class "btn-link",
+   :role "button",
+   :style "color:blue",
+   :onclick
+   "parent.window.location.replace((parent.window.location.href).replace('/menu','/menuCorrecao?id=R05-02'));",
+   :data-toggle "tooltip",
+   :data-placement "top",
+   :title "Reservado para corretores"},
+  :content ("Correção")}
+ {:tag :a,
+  :attrs
+  {:href "requestDownload?id=R06-02",
+   :data-toggle "tooltip",
+   :data-placement "top",
+   :title "Download environment"},
+  :content ("Lista ligada (iterativa)")}
+ {:tag :a,
+  :attrs
+  {:href "report?id=R06-02",
+   :data-toggle "tooltip",
+   :data-placement "right",
+   :title "Disponível a partir de 24/04/2019 16:00",
+   :_ "_"},
+  :content ("Notas da atividade")}
+ {:tag :a,
+  :attrs
+  {:class "btn-link",
+   :role "button",
+   :style "color:blue",
+   :onclick
+   "parent.window.location.replace((parent.window.location.href).replace('/menu','/menuCorrecao?id=R06-02'));",
+   :data-toggle "tooltip",
+   :data-placement "top",
+   :title "Reservado para corretores"},
+  :content ("Correção")}
+ {:tag :a,
+  :attrs {:href "https://youtu.be/qHrR1vk26Fo", :target "_blank"},
+  :content ("Vídeo explicativo")}
+ {:tag :a,
+  :attrs
+  {:href "requestDownload?id=R07-02",
+   :data-toggle "tooltip",
+   :data-placement "top",
+   :title "Download environment"},
+  :content ("Lista ligada (recursiva)")}
+ {:tag :a,
+  :attrs
+  {:href "report?id=R07-02",
+   :data-toggle "tooltip",
+   :data-placement "right",
+   :title "Disponível a partir de 27/04/2019 14:00",
+   :_ "_"},
+  :content ("Notas da atividade")}
+ {:tag :a,
+  :attrs
+  {:class "btn-link",
+   :role "button",
+   :style "color:blue",
+   :onclick
+   "parent.window.location.replace((parent.window.location.href).replace('/menu','/menuCorrecao?id=R07-02'));",
+   :data-toggle "tooltip",
+   :data-placement "top",
+   :title "Reservado para corretores"},
+  :content ("Correção")}
+ {:tag :a,
+  :attrs {:href "https://youtu.be/LkI-pNK7uyg", :target "_blank"},
+  :content ("Vídeo explicativo")}
+ {:tag :a,
+  :attrs
+  {:href "requestDownload?id=R08-02",
+   :data-toggle "tooltip",
+   :data-placement "top",
+   :title "Download environment"},
+  :content ("Tabelas Hash (endereçamento fechado)")}
+ {:tag :a,
+  :attrs
+  {:href "report?id=R08-02",
+   :data-toggle "tooltip",
+   :data-placement "right",
+   :title "Disponível a partir de 01/05/2019 16:00",
+   :_ "_"},
+  :content ("Notas da atividade")}
+ {:tag :a,
+  :attrs
+  {:class "btn-link",
+   :role "button",
+   :style "color:blue",
+   :onclick
+   "parent.window.location.replace((parent.window.location.href).replace('/menu','/menuCorrecao?id=R08-02'));",
+   :data-toggle "tooltip",
+   :data-placement "top",
+   :title "Reservado para corretores"},
+  :content ("Correção")}
+ {:tag :a,
+  :attrs {:href "https://youtu.be/VdVHoJQs34E", :target "_blank"},
+  :content ("Vídeo explicativo")}
+ {:tag :a,
+  :attrs
+  {:href "requestDownload?id=R09-02",
+   :data-toggle "tooltip",
+   :data-placement "top",
+   :title "Download environment"},
+  :content ("Tabelas Hash (endereçamento aberto)")}
+ {:tag :a,
+  :attrs
+  {:href "report?id=R09-02",
+   :data-toggle "tooltip",
+   :data-placement "right",
+   :title "Disponível a partir de 04/05/2019 20:00",
+   :_ "_"},
+  :content ("Notas da atividade")}
+ {:tag :a,
+  :attrs
+  {:class "btn-link",
+   :role "button",
+   :style "color:blue",
+   :onclick
+   "parent.window.location.replace((parent.window.location.href).replace('/menu','/menuCorrecao?id=R09-02'));",
+   :data-toggle "tooltip",
+   :data-placement "top",
+   :title "Reservado para corretores"},
+  :content ("Correção")}
+ {:tag :a,
+  :attrs {:href "https://youtu.be/DxSuWHxTDnA", :target "_blank"},
+  :content ("Vídeo explicativo")}
+ {:tag :a,
+  :attrs
+  {:href "requestDownload?id=R10-02",
+   :data-toggle "tooltip",
+   :data-placement "top",
+   :title "Download environment"},
+  :content ("Set Linked List")}
+ {:tag :a,
+  :attrs
+  {:href "report?id=R10-02",
+   :data-toggle "tooltip",
+   :data-placement "right",
+   :title "Disponível a partir de 08/05/2019 16:00",
+   :_ "_"},
+  :content ("Notas da atividade")}
+ {:tag :a,
+  :attrs
+  {:class "btn-link",
+   :role "button",
+   :style "color:blue",
+   :onclick
+   "parent.window.location.replace((parent.window.location.href).replace('/menu','/menuCorrecao?id=R10-02'));",
+   :data-toggle "tooltip",
+   :data-placement "top",
+   :title "Reservado para corretores"},
+  :content ("Correção")}
+ {:tag :a,
+  :attrs
+  {:href "requestDownload?id=PP2-02",
+   :data-toggle "tooltip",
+   :data-placement "top",
+   :title "Download environment"},
+  :content ("Prova Prática 2")}
+ {:tag :a,
+  :attrs
+  {:href "report?id=PP2-02",
+   :data-toggle "tooltip",
+   :data-placement "right",
+   :title "Disponível a partir de 09/05/2019 16:20",
+   :_ "_"},
+  :content ("Notas da atividade")}
+ {:tag :a,
+  :attrs
+  {:class "btn-link",
+   :role "button",
+   :style "color:blue",
+   :onclick
+   "parent.window.location.replace((parent.window.location.href).replace('/menu','/menuCorrecao?id=PP2-02'));",
+   :data-toggle "tooltip",
+   :data-placement "top",
+   :title "Reservado para corretores"},
+  :content ("Correção")}
+ {:tag :a,
+  :attrs {:href "http://150.165.85.29:81/horaAtual"},
+  :content ("hora atual do servidor")}
+ {:tag :a,
+  :attrs {:href "https://youtu.be/dSXDV1-8-uk", :target "_blank"},
+  :content ("Design esperado")}
+ {:tag :a,
+  :attrs
+  {:href "#",
+   :data-toggle "tooltip",
+   :data-placement "top",
+   :title "Disponível a partir da data e hora de liberação"},
+  :content ("Árvore Binária da Busca")}
+ {:tag :a,
+  :attrs
+  {:href "report?id=R11-02",
+   :data-toggle "tooltip",
+   :data-placement "right",
+   :title "Disponível a partir de 18/05/2019 14:00",
+   :_ "_"},
+  :content ("Notas da atividade")}
+ {:tag :a,
+  :attrs
+  {:class "btn-link",
+   :role "button",
+   :style "color:blue",
+   :onclick
+   "parent.window.location.replace((parent.window.location.href).replace('/menu','/menuCorrecao?id=R11-02'));",
+   :data-toggle "tooltip",
+   :data-placement "top",
+   :title "Reservado para corretores"},
+  :content ("Correção")}
+ {:tag :a,
+  :attrs
+  {:href
+   "https://sites.google.com/a/computacao.ufcg.edu.br/edaufcg/crono/cronograma-t1/Padrao%20de%20projeto%20comparator%20em%20colecoes%20e%20builder.pdf?attredirects=0&d=1"},
+  :content ("aqui")}
+ {:tag :a,
+  :attrs
+  {:href "#",
+   :data-toggle "tooltip",
+   :data-placement "top",
+   :title "Disponível a partir da data e hora de liberação"},
+  :content ("Extensão de árvore binária de busca")}
+ {:tag :a,
+  :attrs
+  {:href "report?id=R12-02",
+   :data-toggle "tooltip",
+   :data-placement "right",
+   :title "Disponível a partir de 22/05/2019 16:00",
+   :_ "_"},
+  :content ("Notas da atividade")}
+ {:tag :a,
+  :attrs
+  {:class "btn-link",
+   :role "button",
+   :style "color:blue",
+   :onclick
+   "parent.window.location.replace((parent.window.location.href).replace('/menu','/menuCorrecao?id=R12-02'));",
+   :data-toggle "tooltip",
+   :data-placement "top",
+   :title "Reservado para corretores"},
+  :content ("Correção")}
+ {:tag :a,
+  :attrs {:href "https://youtu.be/95nEFrvpi_0", :target "_blank"},
+  :content ("Vídeo explicativo")}
+ {:tag :a,
+  :attrs
+  {:href "#",
+   :data-toggle "tooltip",
+   :data-placement "top",
+   :title "Disponível a partir da data e hora de liberação"},
+  :content ("Heap Binária")}
+ {:tag :a,
+  :attrs
+  {:href "report?id=R13-02",
+   :data-toggle "tooltip",
+   :data-placement "right",
+   :title "Disponível a partir de 25/05/2019 14:00",
+   :_ "_"},
+  :content ("Notas da atividade")}
+ {:tag :a,
+  :attrs
+  {:class "btn-link",
+   :role "button",
+   :style "color:blue",
+   :onclick
+   "parent.window.location.replace((parent.window.location.href).replace('/menu','/menuCorrecao?id=R13-02'));",
+   :data-toggle "tooltip",
+   :data-placement "top",
+   :title "Reservado para corretores"},
+  :content ("Correção")}
+ {:tag :a,
+  :attrs {:href "https://youtu.be/TbcXE4kJtl8", :target "_blank"},
+  :content ("Vídeo explicativo")}
+ {:tag :a,
+  :attrs
+  {:href "#",
+   :data-toggle "tooltip",
+   :data-placement "top",
+   :title "Disponível a partir da data e hora de liberação"},
+  :content ("AVL")}
+ {:tag :a,
+  :attrs
+  {:href "report?id=R14-02",
+   :data-toggle "tooltip",
+   :data-placement "right",
+   :title "Disponível a partir de 30/05/2019 16:00",
+   :_ "_"},
+  :content ("Notas da atividade")}
+ {:tag :a,
+  :attrs
+  {:class "btn-link",
+   :role "button",
+   :style "color:blue",
+   :onclick
+   "parent.window.location.replace((parent.window.location.href).replace('/menu','/menuCorrecao?id=R14-02'));",
+   :data-toggle "tooltip",
+   :data-placement "top",
+   :title "Reservado para corretores"},
+  :content ("Correção")}
+ {:tag :a,
+  :attrs {:href "https://youtu.be/LLwZBm2R_ic", :target "_blank"},
+  :content ("Vídeo explicativo")}
+ {:tag :a,
+  :attrs
+  {:href "#",
+   :data-toggle "tooltip",
+   :data-placement "top",
+   :title "Disponível a partir da data e hora de liberação"},
+  :content ("Extensão de AVL")}
+ {:tag :a,
+  :attrs
+  {:href "report?id=R15-02",
+   :data-toggle "tooltip",
+   :data-placement "right",
+   :title "Disponível a partir de 01/06/2019 14:00",
+   :_ "_"},
+  :content ("Notas da atividade")}
+ {:tag :a,
+  :attrs
+  {:class "btn-link",
+   :role "button",
+   :style "color:blue",
+   :onclick
+   "parent.window.location.replace((parent.window.location.href).replace('/menu','/menuCorrecao?id=R15-02'));",
+   :data-toggle "tooltip",
+   :data-placement "top",
+   :title "Reservado para corretores"},
+  :content ("Correção")}
+ {:tag :a,
+  :attrs {:href "https://youtu.be/etZcUeP7yfI", :target "_blank"},
+  :content ("Vídeo explicativo")}
+ {:tag :a,
+  :attrs
+  {:href "#",
+   :data-toggle "tooltip",
+   :data-placement "top",
+   :title "Disponível a partir da data e hora de liberação"},
+  :content ("Skip List")}
+ {:tag :a,
+  :attrs
+  {:href "report?id=R16-02",
+   :data-toggle "tooltip",
+   :data-placement "right",
+   :title "Disponível a partir de 05/06/2019 16:00",
+   :_ "_"},
+  :content ("Notas da atividade")}
+ {:tag :a,
+  :attrs
+  {:class "btn-link",
+   :role "button",
+   :style "color:blue",
+   :onclick
+   "parent.window.location.replace((parent.window.location.href).replace('/menu','/menuCorrecao?id=R16-02'));",
+   :data-toggle "tooltip",
+   :data-placement "top",
+   :title "Reservado para corretores"},
+  :content ("Correção")}
+ {:tag :a,
+  :attrs {:href "https://youtu.be/bC-M6BMYn8I", :target "_blank"},
+  :content ("Vídeo explicativo")}
+ {:tag :a,
+  :attrs
+  {:href "#",
+   :data-toggle "tooltip",
+   :data-placement "top",
+   :title "Disponível a partir da data e hora de liberação"},
+  :content ("Arvore PV")}
+ {:tag :a,
+  :attrs
+  {:href "report?id=R17-02",
+   :data-toggle "tooltip",
+   :data-placement "right",
+   :title "Disponível a partir de 08/06/2019 14:00",
+   :_ "_"},
+  :content ("Notas da atividade")}
+ {:tag :a,
+  :attrs
+  {:class "btn-link",
+   :role "button",
+   :style "color:blue",
+   :onclick
+   "parent.window.location.replace((parent.window.location.href).replace('/menu','/menuCorrecao?id=R17-02'));",
+   :data-toggle "tooltip",
+   :data-placement "top",
+   :title "Reservado para corretores"},
+  :content ("Correção")}
+ {:tag :a,
+  :attrs {:href "https://youtu.be/EbzOAA23W9o", :target "_blank"},
+  :content ("Vídeo explicativo")}
+ {:tag :a,
+  :attrs
+  {:href "#",
+   :data-toggle "tooltip",
+   :data-placement "top",
+   :title "Disponível a partir da data e hora de liberação"},
+  :content ("Arvore B")}
+ {:tag :a,
+  :attrs
+  {:href "report?id=R18-02",
+   :data-toggle "tooltip",
+   :data-placement "right",
+   :title "Disponível a partir de 12/06/2019 16:00",
+   :_ "_"},
+  :content ("Notas da atividade")}
+ {:tag :a,
+  :attrs
+  {:class "btn-link",
+   :role "button",
+   :style "color:blue",
+   :onclick
+   "parent.window.location.replace((parent.window.location.href).replace('/menu','/menuCorrecao?id=R18-02'));",
+   :data-toggle "tooltip",
+   :data-placement "top",
+   :title "Reservado para corretores"},
+  :content ("Correção")}
+ {:tag :a,
+  :attrs {:href "https://youtu.be/Ho_Wzs71GMo", :target "_blank"},
+  :content ("Vídeo explicativo")}
+ {:tag :a,
+  :attrs
+  {:href "#",
+   :data-toggle "tooltip",
+   :data-placement "top",
+   :title "Disponível a partir da data e hora de liberação"},
+  :content ("Prova Prática 3")}
+ {:tag :a,
+  :attrs
+  {:href "report?id=PP3-02",
+   :data-toggle "tooltip",
+   :data-placement "right",
+   :title "Disponível a partir de 13/06/2019 16:00",
+   :_ "_"},
+  :content ("Notas da atividade")}
+ {:tag :a,
+  :attrs
+  {:class "btn-link",
+   :role "button",
+   :style "color:blue",
+   :onclick
+   "parent.window.location.replace((parent.window.location.href).replace('/menu','/menuCorrecao?id=PP3-02'));",
+   :data-toggle "tooltip",
+   :data-placement "top",
+   :title "Reservado para corretores"},
+  :content ("Correção")}
+ {:tag :a,
+  :attrs {:href "http://150.165.85.29:81/horaAtual"},
+  :content ("hora atual do servidor")}
+ {:tag :a,
+  :attrs {:href "https://youtu.be/VjRmtSIAwCs", :target "_blank"},
+  :content ("Vídeo explicativo")}
+ {:tag :a,
+  :attrs
+  {:href "#",
+   :data-toggle "tooltip",
+   :data-placement "top",
+   :title "Disponível a partir da data e hora de liberação"},
+  :content ("Prova de Reposição 1")}
+ {:tag :a,
+  :attrs
+  {:href "report?id=PR1-02",
+   :data-toggle "tooltip",
+   :data-placement "right",
+   :title "Disponível a partir de 27/06/2019 16:00",
+   :_ "_"},
+  :content ("Notas da atividade")}
+ {:tag :a,
+  :attrs
+  {:class "btn-link",
+   :role "button",
+   :style "color:blue",
+   :onclick
+   "parent.window.location.replace((parent.window.location.href).replace('/menu','/menuCorrecao?id=PR1-02'));",
+   :data-toggle "tooltip",
+   :data-placement "top",
+   :title "Reservado para corretores"},
+  :content ("Correção")}
+ {:tag :a,
+  :attrs
+  {:href "#",
+   :data-toggle "tooltip",
+   :data-placement "top",
+   :title "Disponível a partir da data e hora de liberação"},
+  :content ("Prova de Reposição 2")}
+ {:tag :a,
+  :attrs
+  {:href "report?id=PR2-02",
+   :data-toggle "tooltip",
+   :data-placement "right",
+   :title "Disponível a partir de 27/06/2019 16:00",
+   :_ "_"},
+  :content ("Notas da atividade")}
+ {:tag :a,
+  :attrs
+  {:class "btn-link",
+   :role "button",
+   :style "color:blue",
+   :onclick
+   "parent.window.location.replace((parent.window.location.href).replace('/menu','/menuCorrecao?id=PR2-02'));",
+   :data-toggle "tooltip",
+   :data-placement "top",
+   :title "Reservado para corretores"},
+  :content ("Correção")}
+ {:tag :a,
+  :attrs
+  {:href "#",
+   :data-toggle "tooltip",
+   :data-placement "top",
+   :title "Disponível a partir da data e hora de liberação"},
+  :content ("Prova de Reposição 3")}
+ {:tag :a,
+  :attrs
+  {:href "report?id=PR3-02",
+   :data-toggle "tooltip",
+   :data-placement "right",
+   :title "Disponível a partir de 27/06/2019 16:00",
+   :_ "_"},
+  :content ("Notas da atividade")}
+ {:tag :a,
+  :attrs
+  {:class "btn-link",
+   :role "button",
+   :style "color:blue",
+   :onclick
+   "parent.window.location.replace((parent.window.location.href).replace('/menu','/menuCorrecao?id=PR3-02'));",
+   :data-toggle "tooltip",
+   :data-placement "top",
+   :title "Reservado para corretores"},
+  :content ("Correção")}
+ {:tag :a,
+  :attrs
+  {:href "#",
+   :data-toggle "tooltip",
+   :data-placement "top",
+   :title "Disponível a partir da data e hora de liberação"},
+  :content ("Prova Final")}
+ {:tag :a,
+  :attrs
+  {:href "report?id=PF1-02",
+   :data-toggle "tooltip",
+   :data-placement "right",
+   :title "Disponível a partir de 11/07/2019 16:00",
+   :_ "_"},
+  :content ("Notas da atividade")}
+ {:tag :a,
+  :attrs
+  {:class "btn-link",
+   :role "button",
+   :style "color:blue",
+   :onclick
+   "parent.window.location.replace((parent.window.location.href).replace('/menu','/menuCorrecao?id=PF1-02'));",
+   :data-toggle "tooltip",
+   :data-placement "top",
+   :title "Reservado para corretores"},
+  :content ("Correção")}
+ {:tag :a,
+  :attrs {:href "http://150.165.85.29:81/horaAtual"},
+  :content ("hora atual do servidor")})

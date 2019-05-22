@@ -1,10 +1,17 @@
 (ns easy-leda.client
   (:require [clj-http.client :as client]
             [clojure.java.io :as io]
-            [clojure.string :as s])
+            [clojure.string :as s]
+            [clojure.zip :as z]
+            [net.cgrand.enlive-html :as h])
   (:import (java.util.zip ZipInputStream ZipEntry)))
 
 (def download-url "http://150.165.85.29:81/download")
+(def crono-url "http://150.165.85.29:81/cronograma")
+(def crono-page
+  (->> (client/get "http://150.165.85.29:81/cronograma")
+       (:body)
+       (h/html-snippet)))
 
 (defn log [& msg]
   (println (str "[LOG]: " (apply str msg))))
@@ -103,7 +110,7 @@
 (defn valid-pom? [path]
   (boolean (when (.exists (io/file path "pom.xml"))
              (when-let [exc (pom-exc path)]
-               (s/includes? exc "R")))))
+               exc))))
 
 (defn files [^java.io.File arg]
   (.listFiles arg))
@@ -120,18 +127,51 @@
   (if-not (= from to)
     (do
       (log "Movendo " from " -> " to)
-      (.renameTo (io/file from) (io/file to)))
+      #_(.renameTo (io/file from) (io/file to)))
     (log "Diretorio " from " ja tem o nome correto"))
   to)
 
-(defn new-dir [mat base path]
-  (log "Procurando nome correto para " path)
-  (->> (pom-exc path)
-       (get-exc-data mat)
-       (full-path base)))
+#_(defn get-exc-name [exc]
+  (let [shortname ((re-find #"(.*)-\d{2}" exc) 1)]
+    (->> (h/select crono-page [:td :a])
+         (filter (fn [td] (= (get-in td [:attrs :href]) (str "requestDownload?id=" shortname "-01"))))
+         (first)
+         (:content)
+         (first))))
 
-(defn organize [{:keys [mat path]}]
-  (let [new-dir* (partial new-dir mat path)
+(defn get-exc-name [exc]
+  (->> (h/select crono-page [:td :a])
+       (filter #(= (get-in % [:attrs :href]) (str "requestDownload?id=" exc)))
+       first
+       h/text))
+
+(defn deaccent [arg]
+  "Remove accent from string"
+  ;; http://www.matt-reid.co.uk/blog_post.php?id=69
+  (let [normalized (java.text.Normalizer/normalize arg java.text.Normalizer$Form/NFD)]
+    (s/replace normalized #"\p{InCombiningDiacriticalMarks}+" "")))
+
+(defn capitalize-and-camel-case [arg]
+  (->> (s/split arg #"\s")
+       (map s/capitalize)
+       (s/join)))
+
+(defn formatted-name [arg]
+  (as-> (deaccent arg) result
+    (s/replace result #"[():,]" "")
+    (capitalize-and-camel-case result)))
+
+(defn new-dir [base path]
+  (log "Procurando nome correto para " path)
+  (let [exc (pom-exc path)]
+    (log "Exercicio: " exc)
+    (->> (get-exc-name exc)
+         (formatted-name)
+         (str exc "-")
+         (str base))))
+
+(defn organize [{:keys [path]}]
+  (let [new-dir* (partial new-dir path)
         get-from-to (juxt identity new-dir*)
         move!* (partial apply move!)]
     (->> (subdirs path)
