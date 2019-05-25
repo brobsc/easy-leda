@@ -8,9 +8,9 @@
 (def download-url "http://150.165.85.29:81/download")
 (def crono-url "http://150.165.85.29:81/cronograma")
 (def crono-page
-  (->> @(client/get crono-url)
-       (:body)
-       (h/html-snippet)))
+  (delay  (->> @(client/get crono-url)
+               (:body)
+               (h/html-snippet))))
 
 (defn log [& msg]
   (println (str "[LOG]: " (apply str msg))))
@@ -131,7 +131,7 @@
   to)
 
 (defn get-exc-name [exc]
-  (->> (h/select crono-page [:td :a])
+  (->> (h/select @crono-page [:td :a])
        (filter #(= (get-in % [:attrs :href]) (str "requestDownload?id=" exc)))
        first
        h/text))
