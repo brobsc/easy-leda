@@ -1,5 +1,5 @@
 (ns easy-leda.client
-  (:require [clj-http.client :as client]
+  (:require [org.httpkit.client :as client]
             [clojure.java.io :as io]
             [clojure.string :as s])
   (:import (java.util.zip ZipInputStream ZipEntry)))
@@ -11,11 +11,11 @@
 
 (defn get-exc-data [mat exc]
   (log (str "Pegando conteudo do exercicio " exc))
-  (client/post download-url
-               {:headers {:upgrade-insecure-requests 1
-                          :origin "http://150.165.85.29:81"
-                          :user-agent "easy_leda"
-                          :accept "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3"}
+  @(client/post download-url
+               {:headers {"Upgrade-Insecure-Requests" 1
+                          "Origin" "http://150.165.85.29:81"
+                          "User-Agent" "easy_leda"
+                          "Accept" "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3"}
                 :form-params {:id exc
                               :matricula mat}
                 :as :stream}))

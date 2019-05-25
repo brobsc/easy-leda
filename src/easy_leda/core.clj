@@ -3,8 +3,10 @@
   (:require [clojure.java.io :as io]
             [easy-leda.client :as lc]))
 
+(set! *warn-on-reflection* true)
+
 (def user-file-path [(System/getProperty "user.home") ".easy_leda"])
-(def user-file (apply io/file user-file-path))
+(def ^java.io.File user-file (apply io/file user-file-path))
 (defn user-conf [] (read-string (slurp (doto (apply io/file user-file-path)))))
 
 (defn prepare-user-file []
