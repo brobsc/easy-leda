@@ -1,6 +1,5 @@
 {:paths ["src"]
  :deps {org.clojure/clojure {:mvn/version "1.10.0"}
-        clj-http {:mvn/version "3.10.0"}
         http-kit {:mvn/version "2.3.0"}
         enlive {:mvn/version "1.1.6"}}
  :aliases {:dev {:extra-paths ["dev/src"]
@@ -13,7 +12,7 @@
            :cambada {:extra-deps {cambada/cambada {:mvn/version "1.0.4"}}}
 
            :uberjar {:main-opts ["-m" "cambada.uberjar"
-                                 "--app-version" "0.2.0"
+                                 "--app-version" "0.3.0"
                                  "-m" "easy_leda.core"]}}
 
  ;; mvn/repos required because of cambada bug
