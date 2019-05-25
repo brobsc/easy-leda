@@ -2,14 +2,13 @@
   (:require [org.httpkit.client :as client]
             [clojure.java.io :as io]
             [clojure.string :as s]
-            [clojure.zip :as z]
             [net.cgrand.enlive-html :as h])
   (:import (java.util.zip ZipInputStream ZipEntry)))
 
 (def download-url "http://150.165.85.29:81/download")
 (def crono-url "http://150.165.85.29:81/cronograma")
 (def crono-page
-  (->> (client/get "http://150.165.85.29:81/cronograma")
+  (->> @(client/get crono-url)
        (:body)
        (h/html-snippet)))
 
@@ -127,17 +126,9 @@
   (if-not (= from to)
     (do
       (log "Movendo " from " -> " to)
-      #_(.renameTo (io/file from) (io/file to)))
+      (.renameTo (io/file from) (io/file to)))
     (log "Diretorio " from " ja tem o nome correto"))
   to)
-
-#_(defn get-exc-name [exc]
-  (let [shortname ((re-find #"(.*)-\d{2}" exc) 1)]
-    (->> (h/select crono-page [:td :a])
-         (filter (fn [td] (= (get-in td [:attrs :href]) (str "requestDownload?id=" shortname "-01"))))
-         (first)
-         (:content)
-         (first))))
 
 (defn get-exc-name [exc]
   (->> (h/select crono-page [:td :a])
@@ -167,7 +158,7 @@
     (log "Exercicio: " exc)
     (->> (get-exc-name exc)
          (formatted-name)
-         (str exc "-")
+         (str (first (s/split exc #"-")) "-")
          (str base))))
 
 (defn organize [{:keys [path]}]
