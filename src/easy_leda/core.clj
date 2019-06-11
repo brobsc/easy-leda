@@ -4,6 +4,7 @@
             [easy-leda.client :as lc]))
 
 (set! *warn-on-reflection* true)
+(def -version "0.4.0")
 
 (def user-file-path [(System/getProperty "user.home") ".easy_leda"])
 (def ^java.io.File user-file (apply io/file user-file-path))

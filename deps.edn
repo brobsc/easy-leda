@@ -2,18 +2,15 @@
  :deps {org.clojure/clojure {:mvn/version "1.9.0"}
         http-kit {:mvn/version "2.3.0"}
         enlive {:mvn/version "1.1.6"}}
- :aliases {:dev {:extra-paths ["dev/src"]
+ :aliases {:dev {:extra-paths ["dev"]
                  :extra-deps {nrepl {:mvn/version "0.6.0"}
-                              reply {:mvn/version "0.4.3"}}
+                              reply {:mvn/version "0.4.3"}
+                              cambada/cambada {:mvn/version "1.0.4"}}
                  :main-opts ["-m" "easy-leda.dev"]}
 
            :run {:main-opts ["-m" "easy-leda.core"]}
 
-           :cambada {:extra-deps {cambada/cambada {:mvn/version "1.0.4"}}}
-
-           :uberjar {:main-opts ["-m" "cambada.uberjar"
-                                 "--app-version" "0.3.0"
-                                 "-m" "easy_leda.core"]}}
+           :uberjar {:main-opts ["-m" "easy-leda.uberjar"]}}
 
  ;; mvn/repos required because of cambada bug
  :mvn/repos {"central" {:url "https://repo1.maven.org/maven2/"}
