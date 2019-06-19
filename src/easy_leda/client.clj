@@ -32,6 +32,22 @@
 (defmethod dir? ZipEntry [^ZipEntry entry] (.isDirectory entry))
 (defmethod dir? String [arg] (.isDirectory (io/file arg)))
 
+(defn deaccent [arg]
+  "Remove accent from string"
+  ;; http://www.matt-reid.co.uk/blog_post.php?id=69
+  (let [normalized (java.text.Normalizer/normalize arg java.text.Normalizer$Form/NFD)]
+    (s/replace normalized #"\p{InCombiningDiacriticalMarks}+" "")))
+
+(defn capitalize-and-camel-case [arg]
+  (->> (s/split arg #"\s")
+       (map s/capitalize)
+       (s/join)))
+
+(defn formatted-name [arg]
+  (as-> (deaccent arg) result
+    (s/replace result #"[():,]" "")
+    (capitalize-and-camel-case result)))
+
 (defn zip-entry->file! [^ZipEntry entry zip out]
   (when-not (dir? entry)
     (log (str "Extraindo " (.getName entry)))
@@ -50,9 +66,6 @@
   ((re-find #"filename=\"(R.*)-environment.zip\""
             (get-in res [:headers :content-disposition])) 1))
 
-(defn full-path [out res]
-  (->> (res->filename res)
-       (str out)))
 
 (defn stream->files! [out ^ZipInputStream zip-stream]
   (log "Preparando para extrair arquivos para " out "...")
@@ -62,6 +75,19 @@
           (recur (.getNextEntry zip-stream)))
       out)))
 
+
+(defn get-exc-name [exc]
+  (->> (h/select @crono-page [:td :a])
+       (filter #(= (get-in % [:attrs :href]) (str "requestDownload?id=" exc)))
+       first
+       h/text))
+
+(defn full-path [out exc]
+  (->> (get-exc-name exc)
+       (formatted-name)
+       (str (first (s/split exc #"-")) "-")
+       (str out)))
+
 (defn res->stream [res]
   (log "Convertendo resposta para zip...")
   (-> res
@@ -69,10 +95,11 @@
       (io/input-stream)
       (ZipInputStream.)))
 
-(defn dl->folder! [out res]
+(defn dl->folder! [exc out res]
   (log "Preparando arquivos...")
-  (->> (res->stream res)
-       (stream->files! (full-path out res))))
+  (let [folder (full-path out exc)]
+    (->> (res->stream res)
+         (stream->files! folder))))
 
 (defn exc-name [exc g1]
   (format "%s-%s" exc (if g1 "01" "02")))
@@ -97,7 +124,7 @@
   (log "Iniciando download de exercicio...")
   (let [exc-name* (exc-name exc g1)]
     (->> (get-exc-data mat exc-name*)
-         (dl->folder! path)
+         (dl->folder! exc-name* path)
          (update-pom! exc mat g1)
          (print-cmd))))
 
@@ -130,28 +157,6 @@
       (.renameTo (io/file from) (io/file to)))
     (log "Diretorio " from " ja tem o nome correto"))
   to)
-
-(defn get-exc-name [exc]
-  (->> (h/select @crono-page [:td :a])
-       (filter #(= (get-in % [:attrs :href]) (str "requestDownload?id=" exc)))
-       first
-       h/text))
-
-(defn deaccent [arg]
-  "Remove accent from string"
-  ;; http://www.matt-reid.co.uk/blog_post.php?id=69
-  (let [normalized (java.text.Normalizer/normalize arg java.text.Normalizer$Form/NFD)]
-    (s/replace normalized #"\p{InCombiningDiacriticalMarks}+" "")))
-
-(defn capitalize-and-camel-case [arg]
-  (->> (s/split arg #"\s")
-       (map s/capitalize)
-       (s/join)))
-
-(defn formatted-name [arg]
-  (as-> (deaccent arg) result
-    (s/replace result #"[():,]" "")
-    (capitalize-and-camel-case result)))
 
 (defn new-dir [base path]
   (log "Procurando nome correto para " path)
