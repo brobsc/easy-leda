@@ -3,7 +3,8 @@
             [clojure.java.io :as io]
             [clojure.string :as s]
             [net.cgrand.enlive-html :as h])
-  (:import (java.util.zip ZipInputStream ZipEntry)))
+  (:import (java.util.zip ZipInputStream ZipEntry)
+           (java.io File)))
 
 (def download-url "http://150.165.85.29:81/download")
 (def crono-url "http://150.165.85.29:81/cronograma")
@@ -27,8 +28,8 @@
                 :as :stream}))
 
 (defmulti dir? (fn [arg] (class arg)))
-(defmethod dir? java.io.File [file] (.isDirectory file))
-(defmethod dir? java.util.zip.ZipEntry [entry] (.isDirectory entry))
+(defmethod dir? File [^File file] (.isDirectory file))
+(defmethod dir? ZipEntry [^ZipEntry entry] (.isDirectory entry))
 (defmethod dir? String [arg] (.isDirectory (io/file arg)))
 
 (defn zip-entry->file! [^ZipEntry entry zip out]
